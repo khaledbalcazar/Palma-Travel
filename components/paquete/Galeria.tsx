@@ -18,7 +18,7 @@ export function Galeria({ fotos }: { fotos: Imagen[] }) {
   if (fotos.length === 0) return null;
 
   return (
-    <section data-print="ocultar" aria-labelledby="galeria-titulo">
+    <section data-print="galeria" aria-labelledby="galeria-titulo">
       <h2 id="galeria-titulo" className="solo-lectores">
         Galería de fotos
       </h2>

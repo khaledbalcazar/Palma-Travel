@@ -10,6 +10,7 @@ import { Galeria } from "@/components/paquete/Galeria";
 import { BotonCompartir } from "@/components/paquete/BotonCompartir";
 import { CtaFijo } from "@/components/paquete/CtaFijo";
 import { BotonImprimir } from "@/components/paquete/BotonImprimir";
+import { AbrirAlImprimir } from "@/components/paquete/AbrirAlImprimir";
 import { BotonWhatsApp } from "@/components/site/BotonWhatsApp";
 import {
   Alojamientos,
@@ -53,11 +54,18 @@ export function CuerpoViaje({
 
   return (
     <>
+      <AbrirAlImprimir />
       {avisoArriba}
 
       {/* Portada */}
       <header className="relative">
-        <div className="relative h-[58vh] min-h-[22rem] w-full md:h-[64vh]">
+        {/* La foto y el texto van uno encima del otro: así el bloque de
+            botones nunca se sale de la foto, por más largo que sea el
+            título o por más chica que sea la pantalla. */}
+        <div
+            data-print="portada"
+            className="relative min-h-[34rem] w-full md:min-h-[38rem]"
+          >
           <Foto
             src={viaje.imagenPortada.src}
             alt={viaje.imagenPortada.alt}
@@ -67,57 +75,65 @@ export function CuerpoViaje({
             className="object-cover"
           />
           <div className="absolute inset-0 velo-foto" />
-        </div>
 
-        <div className="contenedor relative -mt-40 pb-8 md:-mt-44">
-          <div className="max-w-3xl text-arena-50">
-            {saludo && (
-              <p className="mb-3 font-display text-lg text-arena-200 italic">
-                {saludo}
-              </p>
-            )}
-
-            <div className="flex flex-wrap gap-2">
-              <InsigniasViaje viaje={viaje} sobreFoto />
-              {viaje.esEjemplo && (
-                <Insignia tono="oscuro">Viaje de ejemplo</Insignia>
+          <div className="contenedor absolute inset-x-0 bottom-0 pt-24 pb-10 md:pb-12">
+            <div className="max-w-3xl text-arena-50">
+              {saludo && (
+                <p className="mb-3 font-display text-lg text-arena-200 italic">
+                  {saludo}
+                </p>
               )}
-            </div>
 
-            <h1 className="mt-4 font-display text-4xl text-arena-50 md:text-5xl">
-              {viaje.titulo}
-            </h1>
+              <div className="flex flex-wrap gap-2">
+                <InsigniasViaje viaje={viaje} sobreFoto />
+                {viaje.esEjemplo && (
+                  <Insignia tono="oscuro">Viaje de ejemplo</Insignia>
+                )}
+              </div>
 
-            <p className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-arena-200">
-              <span className="inline-flex items-center gap-1.5">
-                <MapPin className="size-4" aria-hidden="true" />
-                {viaje.destino}, {viaje.pais}
-              </span>
-              <span aria-hidden="true">·</span>
-              <span>{duracion(viaje.duracionDias, viaje.duracionNoches)}</span>
-              <span aria-hidden="true">·</span>
-              <span>
-                Desde <strong className="font-semibold">{precio.principal}</strong>
-              </span>
-            </p>
+              <h1 className="mt-4 font-display text-4xl text-arena-50 md:text-5xl">
+                {viaje.titulo}
+              </h1>
 
-            <div className="mt-6 flex flex-wrap items-center gap-3" data-print="ocultar">
-              <BotonWhatsApp
-                href={whatsapp}
-                origen="hero_paquete"
-                paquete={viaje.titulo}
-                tamano="lg"
+              <p className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-arena-200">
+                <span className="inline-flex items-center gap-1.5">
+                  <MapPin className="size-4" aria-hidden="true" />
+                  {viaje.destino}, {viaje.pais}
+                </span>
+                <span aria-hidden="true">·</span>
+                <span>
+                  {duracion(viaje.duracionDias, viaje.duracionNoches)}
+                </span>
+                <span aria-hidden="true">·</span>
+                <span>
+                  Desde{" "}
+                  <strong className="font-semibold">{precio.principal}</strong>
+                </span>
+              </p>
+
+              <div
+                className="mt-6 flex flex-wrap items-center gap-3"
+                data-print="ocultar"
               >
-                {agotado ? "Anotarme en la lista de espera" : "Consultar por WhatsApp"}
-              </BotonWhatsApp>
+                <BotonWhatsApp
+                  href={whatsapp}
+                  origen="hero_paquete"
+                  paquete={viaje.titulo}
+                  tamano="lg"
+                >
+                  {agotado
+                    ? "Anotarme en la lista de espera"
+                    : "Consultar por WhatsApp"}
+                </BotonWhatsApp>
 
-              <BotonCompartir
-                titulo={viaje.titulo}
-                texto={`${viaje.destino} · ${duracion(viaje.duracionDias, viaje.duracionNoches)} · desde ${precio.principal}`}
-                className="bg-arena-50/15 text-arena-50 hover:bg-arena-50/25"
-              />
+                <BotonCompartir
+                  titulo={viaje.titulo}
+                  texto={`${viaje.destino} · ${duracion(viaje.duracionDias, viaje.duracionNoches)} · desde ${precio.principal}`}
+                  className="bg-arena-50/15 text-arena-50 hover:bg-arena-50/25"
+                />
 
-              <BotonImprimir className="bg-arena-50/15 text-arena-50 hover:bg-arena-50/25" />
+                <BotonImprimir className="bg-arena-50/15 text-arena-50 hover:bg-arena-50/25" />
+              </div>
             </div>
           </div>
         </div>
@@ -204,7 +220,9 @@ export function CuerpoViaje({
               paquete={viaje.titulo}
               tamano="lg"
             >
-              {agotado ? "Anotarme en la lista de espera" : "Escribinos por WhatsApp"}
+              {agotado
+                ? "Anotarme en la lista de espera"
+                : "Escribinos por WhatsApp"}
             </BotonWhatsApp>
           </div>
         </section>
@@ -227,7 +245,8 @@ export function CuerpoViaje({
       <div data-print="pie" className="contenedor pb-8 text-xs text-tinta-500">
         <p>
           {SITIO.nombreLegal}
-          {config.registroSenatur && ` · Registro SENATUR n.º ${config.registroSenatur}`}
+          {config.registroSenatur &&
+            ` · Registro SENATUR n.º ${config.registroSenatur}`}
           {config.whatsapp && ` · WhatsApp +${config.whatsapp}`}
           {config.email && ` · ${config.email}`}
         </p>

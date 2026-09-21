@@ -38,9 +38,38 @@
   section, li, tr, figure { break-inside: avoid; }
 
   img {
-    max-height: 70mm;
-    width: auto !important;
     break-inside: avoid;
+  }
+
+  /* La portada, más baja en papel: no vale gastar media hoja en la foto.
+     Se deja como está la forma en que la imagen llena su contenedor, que
+     es lo que next/image necesita para recortar bien. */
+  [data-print="portada"] {
+    height: 78mm !important;
+    min-height: 0 !important;
+  }
+
+  /* La galería sí se imprime, pero plana: sin el efecto de ampliar y
+     con todas las fotos del mismo tamaño, de a tres por fila. */
+  [data-print="galeria"] ul {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 3mm !important;
+  }
+
+  [data-print="galeria"] li {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+  }
+
+  [data-print="galeria"] button {
+    display: block !important;
+    height: 38mm !important;
+  }
+
+  /* El velo oscuro con la lupa que aparece al pasar el mouse */
+  [data-print="galeria"] button > span {
+    display: none !important;
   }
 
   /* Sin sombras ni fondos que gasten tinta */
