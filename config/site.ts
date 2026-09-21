@@ -1,4 +1,5 @@
 import { PESOS_MATCH_DEFAULT, type SiteConfig } from "@/lib/schema";
+import { normalizarUrlSitio } from "@/lib/url-sitio";
 
 /* ===================================================================
    DATOS DE CONTACTO Y DE LA MARCA
@@ -50,8 +51,10 @@ export const SITIO = {
   eslogan: "Cada viaje, a tu medida",
   descripcion:
     "Agencia de viajes paraguaya registrada en SENATUR. Armamos paquetes y viajes a medida con salidas desde Asunción.",
-  /** Dominio de producción. Cambiar al dominio real antes de publicar. */
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://palmatravel.com.py",
+  /** Dominio de producción, tomado de NEXT_PUBLIC_SITE_URL.
+   *  Si viene vacía o mal escrita, se usa la de por defecto y se avisa
+   *  en el log, en vez de tirar abajo el build. */
+  url: normalizarUrlSitio(process.env.NEXT_PUBLIC_SITE_URL),
   locale: "es_PY",
   idioma: "es-PY",
   zonaHoraria: "America/Asuncion",
