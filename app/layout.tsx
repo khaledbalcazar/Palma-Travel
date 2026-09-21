@@ -1,8 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Fraunces, Plus_Jakarta_Sans } from "next/font/google";
 import { SITIO } from "@/config/site";
-import { Header } from "@/components/site/Header";
-import { Footer } from "@/components/site/Footer";
 import "./globals.css";
 
 const display = Fraunces({
@@ -53,17 +51,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es-PY" className={`${display.variable} ${sans.variable}`}>
-      <body className="min-h-dvh antialiased">
-        <a
-          href="#contenido"
-          className="solo-lectores focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:rounded-full focus:bg-palma-800 focus:px-5 focus:py-3 focus:text-arena-50"
-        >
-          Saltar al contenido
-        </a>
-        <Header />
-        <main id="contenido">{children}</main>
-        <Footer />
-      </body>
+      <body className="min-h-dvh antialiased">{children}</body>
     </html>
   );
 }
