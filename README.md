@@ -175,6 +175,9 @@ suficiente.
    | `NEXT_PUBLIC_GA4_ID` | Opcional, Google Analytics |
    | `NEXT_PUBLIC_META_PIXEL_ID` | Opcional, píxel de Meta |
 
+   Las dos últimas se pueden dejar sin cargar: si no están, el sitio
+   simplemente no carga ningún script de analítica.
+
 5. **Deploy**. En un par de minutos está en línea.
 6. Para usar el dominio propio: **Settings → Domains**, agregalo y seguí las
    instrucciones para apuntar el DNS.
