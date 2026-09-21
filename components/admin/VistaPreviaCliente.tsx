@@ -2,7 +2,14 @@
 
 import { useEffect, useState } from "react";
 import { TriangleAlert } from "lucide-react";
+import { CuerpoViaje } from "@/components/paquete/CuerpoViaje";
 import {
+  linkWhatsApp,
+  mensajePaquete,
+  mensajePropuesta,
+} from "@/lib/whatsapp";
+import {
+  esPropuesta,
   paqueteSchema,
   propuestaSchema,
   type SiteConfig,
@@ -12,7 +19,7 @@ import {
 /* Lee lo que el formulario dejó guardado en la pestaña y lo dibuja.
    La página de verdad se arma con los mismos componentes, así que lo que
    se ve acá es lo que va a quedar publicado. */
-export function VistaPreviaCliente({ config: _config }: { config: SiteConfig }) {
+export function VistaPreviaCliente({ config }: { config: SiteConfig }) {
   const [viaje, setViaje] = useState<Viaje | null>(null);
   const [problema, setProblema] = useState<string | null>(null);
 
@@ -65,20 +72,18 @@ export function VistaPreviaCliente({ config: _config }: { config: SiteConfig }) 
 
   return (
     <>
-      <p className="bg-coral-600 px-5 py-2 text-center text-sm font-medium text-white">
+      <p className="sticky top-0 z-50 bg-coral-600 px-5 py-2 text-center text-sm font-medium text-white">
         Vista previa — así se va a ver «{viaje.titulo}». Todavía no está
         publicado.
       </p>
-      <div className="contenedor py-12">
-        <h1 className="font-display text-4xl text-palma-900">{viaje.titulo}</h1>
-        <p className="mt-2 text-tinta-600">
-          {viaje.destino} · {viaje.duracionDias} días
-        </p>
-        <p className="mt-8 rounded-xl bg-arena-100 px-5 py-4 text-sm text-tinta-600">
-          La página completa se arma en la siguiente fase del proyecto; en cuanto
-          esté, esta vista previa la muestra entera.
-        </p>
-      </div>
+      <CuerpoViaje
+        viaje={viaje}
+        config={config}
+        whatsapp={linkWhatsApp(
+          config,
+          esPropuesta(viaje) ? mensajePropuesta(viaje) : mensajePaquete(viaje),
+        )}
+      />
     </>
   );
 }

@@ -63,6 +63,7 @@ export type Borrador = {
 
   tags: string[];
   destacado: boolean;
+  ultimosLugares: boolean;
   esEjemplo: boolean;
 
   /* Solo propuestas */
@@ -112,6 +113,7 @@ export function borradorVacio(): Borrador {
 
     tags: [],
     destacado: false,
+    ultimosLugares: false,
     esEjemplo: false,
 
     clienteNombre: "",
@@ -165,6 +167,9 @@ export function borradorDesde(
 
     tags: viaje.tags,
     destacado: esPropuesta ? false : (viaje as PaqueteRegistro).destacado,
+    ultimosLugares: esPropuesta
+      ? false
+      : (viaje as PaqueteRegistro).ultimosLugares,
     esEjemplo: viaje.esEjemplo,
 
     clienteNombre: esPropuesta ? (viaje as PropuestaRegistro).clienteNombre : "",
@@ -220,7 +225,12 @@ export function aDatosDeViaje(
     };
   }
 
-  return { ...comun, estado: b.estado, destacado: b.destacado };
+  return {
+    ...comun,
+    estado: b.estado,
+    destacado: b.destacado,
+    ultimosLugares: b.ultimosLugares,
+  };
 }
 
 const limpiar = (lista: string[]) => lista.map((t) => t.trim()).filter(Boolean);

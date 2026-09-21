@@ -32,6 +32,7 @@ export type FilaPaquete = {
   faq: unknown;
   tags: string[];
   destacado: boolean;
+  ultimos_lugares: boolean;
   es_ejemplo: boolean;
   creado_en: string;
   actualizado_en: string;
@@ -39,7 +40,10 @@ export type FilaPaquete = {
   actualizado_por_nombre: string;
 };
 
-export type FilaPropuesta = Omit<FilaPaquete, "estado" | "destacado"> & {
+export type FilaPropuesta = Omit<
+  FilaPaquete,
+  "estado" | "destacado" | "ultimos_lugares"
+> & {
   cliente_nombre: string;
   valida_hasta: string;
   notas_internas?: string;

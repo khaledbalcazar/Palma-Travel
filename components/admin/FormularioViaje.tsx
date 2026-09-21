@@ -61,7 +61,7 @@ const SECCIONES: { id: Seccion; etiqueta: string; campos: string[] }[] = [
     id: "general",
     etiqueta: "Datos generales",
     campos: ["slug", "titulo", "destino", "pais", "region", "estado", "tipoViaje",
-             "idealPara", "ritmo", "duracionDias", "duracionNoches",
+             "idealPara", "ritmo", "duracionDias", "duracionNoches", "ultimosLugares",
              "clienteNombre", "validaHasta", "highlights"],
   },
   {
@@ -680,13 +680,22 @@ function SeccionGeneral({
       />
 
       {esPaquete && (
-        <CampoInterruptor
-          id="destacado"
-          etiqueta="Destacado"
-          ayuda="Los destacados aparecen primero en el catálogo y en la página de inicio."
-          checked={datos.destacado}
-          onChange={(v) => actualizar("destacado", v)}
-        />
+        <div className="space-y-4">
+          <CampoInterruptor
+            id="destacado"
+            etiqueta="Destacado"
+            ayuda="Los destacados aparecen primero en el catálogo y en la página de inicio."
+            checked={datos.destacado}
+            onChange={(v) => actualizar("destacado", v)}
+          />
+          <CampoInterruptor
+            id="ultimosLugares"
+            etiqueta="Últimos lugares"
+            ayuda="Marcalo cuando queden pocos cupos: el catálogo lo muestra con un cartelito que apura la consulta."
+            checked={datos.ultimosLugares}
+            onChange={(v) => actualizar("ultimosLugares", v)}
+          />
+        </div>
       )}
     </div>
   );

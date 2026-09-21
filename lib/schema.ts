@@ -243,6 +243,10 @@ export const paqueteSchema = z.object({
   tags: z.array(z.string().trim().min(1)).default([]),
   destacado: z.boolean().default(false),
 
+  /** Lo marca el equipo cuando quedan pocos cupos. No se calcula solo:
+   *  nadie más que la agencia sabe cuántos lugares quedan. */
+  ultimosLugares: z.boolean().default(false),
+
   /* Marca los 6 paquetes de muestra: el sitio los señala como ejemplo. */
   esEjemplo: z.boolean().default(false),
 });
@@ -277,7 +281,7 @@ export const paqueteValidadoSchema = reglasDeCoherencia(paqueteSchema);
 /* ---------- Propuesta personalizada ---------- */
 
 export const propuestaSchema = paqueteSchema
-  .omit({ estado: true, destacado: true })
+  .omit({ estado: true, destacado: true, ultimosLugares: true })
   .extend({
     clienteNombre: texto("el nombre del cliente").max(
       120,

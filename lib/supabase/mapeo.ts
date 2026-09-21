@@ -53,6 +53,7 @@ export function paqueteDeFila(f: FilaPaquete): PaqueteRegistro {
     ...comunDeFila(f),
     estado: f.estado,
     destacado: f.destacado,
+    ultimosLugares: f.ultimos_lugares,
   });
   return {
     ...paquete,
@@ -119,6 +120,7 @@ export function paqueteAFila(p: Paquete, quien?: { id: string; nombre: string })
     ...comunAFila(p),
     estado: p.estado,
     destacado: p.destacado,
+    ultimos_lugares: p.ultimosLugares,
     ...(quien
       ? { actualizado_por: quien.id, actualizado_por_nombre: quien.nombre }
       : {}),
