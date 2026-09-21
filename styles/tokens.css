@@ -36,7 +36,7 @@
   --color-coral-300: #f5a28c;
   --color-coral-400: #ed7e62;
   --color-coral-500: #e56b4e;
-  --color-coral-600: #cc4e30;
+  --color-coral-600: #c2492d; /* 4,9:1 con blanco — cumple AA */
   --color-coral-700: #a83d24;
   --color-coral-800: #843222;
   --color-coral-900: #5c2519;
@@ -46,7 +46,7 @@
   --color-tinta-100: #e3e7e6;
   --color-tinta-200: #c5cecb;
   --color-tinta-300: #9caaa6;
-  --color-tinta-400: #6f817c;
+  --color-tinta-400: #5f716b; /* 4,97:1 sobre arena-50 — cumple AA */
   --color-tinta-500: #52635e;
   --color-tinta-600: #3d4c48;
   --color-tinta-700: #2c3835;

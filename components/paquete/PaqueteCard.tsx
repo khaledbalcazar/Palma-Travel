@@ -22,7 +22,10 @@ export function PaqueteCard({
     <article
       className={cn(
         "group relative flex flex-col overflow-hidden rounded-2xl bg-arena-50 shadow-suave transition-shadow duration-200",
-        agotado ? "opacity-75" : "hover:shadow-alta",
+        /* Un paquete agotado se apaga en la foto, no en el texto: bajarle
+           la opacidad a todo dejaba los datos por debajo del contraste
+           mínimo que se puede leer. */
+        !agotado && "hover:shadow-alta",
       )}
     >
       <div className="relative aspect-[4/3] overflow-hidden">
@@ -34,7 +37,7 @@ export function PaqueteCard({
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 380px"
           className={cn(
             "transition-transform duration-500",
-            !agotado && "group-hover:scale-105",
+            agotado ? "opacity-60 saturate-50" : "group-hover:scale-105",
           )}
         />
         <div className="absolute inset-x-0 bottom-0 h-1/2 velo-foto" />
@@ -86,7 +89,7 @@ export function PaqueteCard({
           <span
             aria-hidden="true"
             className={cn(
-              "rounded-full px-4 py-2 text-sm font-medium transition-colors",
+              "shrink-0 rounded-full px-4 py-2 text-sm font-medium whitespace-nowrap transition-colors",
               agotado
                 ? "bg-tinta-100 text-tinta-500"
                 : "bg-palma-900/8 text-palma-800 group-hover:bg-palma-800 group-hover:text-arena-50",

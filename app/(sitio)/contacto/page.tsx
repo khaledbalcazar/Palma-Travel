@@ -212,15 +212,16 @@ function Dato({
   etiqueta: string;
   children: React.ReactNode;
 }) {
+  /* `dt` y `dd` van directo dentro de este div, que es lo único que una
+     lista de definiciones acepta entre medio. El ícono vive dentro
+     del `dt` para no romper esa estructura. */
   return (
-    <div className="flex gap-4">
-      <Icono className="mt-0.5 size-5 shrink-0 text-palma-600" aria-hidden={true} />
-      <div>
-        <dt className="text-sm font-semibold tracking-wide text-tinta-500 uppercase">
-          {etiqueta}
-        </dt>
-        <dd className="mt-1 text-[0.95rem] text-tinta-700">{children}</dd>
-      </div>
+    <div className="grid grid-cols-[auto_1fr] gap-x-4">
+      <dt className="col-span-2 grid grid-cols-subgrid items-center text-sm font-semibold tracking-wide text-tinta-500 uppercase">
+        <Icono className="size-5 shrink-0 text-palma-600" aria-hidden={true} />
+        <span>{etiqueta}</span>
+      </dt>
+      <dd className="col-start-2 mt-1 text-[0.95rem] text-tinta-700">{children}</dd>
     </div>
   );
 }

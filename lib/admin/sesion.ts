@@ -9,8 +9,19 @@ import { perfilSchema, type Perfil } from "@/lib/schema";
 
 export type UsuarioPanel = Perfil & { nombreVisible: string };
 
-/** Devuelve el usuario logueado, o null. */
+/** ¿Están cargadas las claves de Supabase? */
+export const hayBaseConfigurada = () =>
+  Boolean(
+    process.env.NEXT_PUBLIC_SUPABASE_URL &&
+      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
+  );
+
+/** Devuelve el usuario logueado, o null.
+ *  Si todavía no hay base configurada devuelve null en vez de romperse:
+ *  así la pantalla que explica cómo configurarla se puede mostrar. */
 export async function usuarioActual(): Promise<UsuarioPanel | null> {
+  if (!hayBaseConfigurada()) return null;
+
   const supabase = await clienteServidor();
   const {
     data: { user },
@@ -37,6 +48,7 @@ export async function usuarioActual(): Promise<UsuarioPanel | null> {
 
 /** Exige que haya alguien logueado y activo. Si no, manda al login. */
 export async function exigirSesion(): Promise<UsuarioPanel> {
+  if (!hayBaseConfigurada()) redirect("/admin/configurar");
   const usuario = await usuarioActual();
   if (!usuario) redirect("/admin/login");
   if (!usuario.activo) redirect("/admin/login?motivo=desactivado");

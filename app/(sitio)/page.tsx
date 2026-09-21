@@ -84,7 +84,7 @@ export default async function Home() {
                 className={estiloBoton({
                   tamano: "lg",
                   className:
-                    "bg-coral-500 text-white hover:bg-coral-600 shadow-suave",
+                    "bg-coral-600 text-white hover:bg-coral-700 shadow-suave",
                 })}
               >
                 <Sparkles className="size-4" aria-hidden="true" />
