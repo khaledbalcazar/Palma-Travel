@@ -28,12 +28,29 @@ export default function Configurar() {
           <strong className="font-semibold text-palma-900">2. Creá las tablas</strong>
           <p className="mt-1.5">
             En el menú lateral entrá a <em>SQL Editor</em>, pegá todo el contenido
-            del archivo <code className="rounded bg-arena-200 px-1.5 py-0.5">
-            supabase/migrations/0001_init.sql</code> y apretá <em>Run</em>.
+            del archivo{" "}
+            <code className="rounded bg-arena-200 px-1.5 py-0.5">
+              supabase/setup-completo.sql
+            </code>{" "}
+            y apretá <em>Run</em>. Tiene que decir <em>Success</em>.
           </p>
         </li>
         <li className="rounded-lg bg-arena-100 p-5">
-          <strong className="font-semibold text-palma-900">3. Copiá las claves</strong>
+          <strong className="font-semibold text-palma-900">
+            3. Configurá las direcciones
+          </strong>
+          <p className="mt-1.5">
+            En <em>Authentication → URL Configuration</em> cargá la dirección del
+            sitio y, en <em>Redirect URLs</em>, agregá{" "}
+            <code className="rounded bg-arena-200 px-1.5 py-0.5">
+              http://localhost:3000/admin
+            </code>{" "}
+            y la del sitio publicado. Sin esto, las invitaciones por email no
+            funcionan.
+          </p>
+        </li>
+        <li className="rounded-lg bg-arena-100 p-5">
+          <strong className="font-semibold text-palma-900">4. Copiá las claves</strong>
           <p className="mt-1.5">
             En <em>Project Settings → API</em> vas a encontrar la URL del proyecto
             y las claves. Copialas en un archivo llamado{" "}
@@ -43,11 +60,15 @@ export default function Configurar() {
           </p>
         </li>
         <li className="rounded-lg bg-arena-100 p-5">
-          <strong className="font-semibold text-palma-900">4. Cargá el contenido</strong>
+          <strong className="font-semibold text-palma-900">5. Cargá el contenido</strong>
           <p className="mt-1.5">
             Desde la terminal, corré{" "}
             <code className="rounded bg-arena-200 px-1.5 py-0.5">npm run seed</code>{" "}
             para subir los paquetes de ejemplo, y volvé a levantar el sitio.
+            Después, <code className="rounded bg-arena-200 px-1.5 py-0.5">
+              npm run verificar
+            </code>{" "}
+            te dice si quedó todo bien.
           </p>
         </li>
       </ol>

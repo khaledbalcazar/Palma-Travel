@@ -207,15 +207,45 @@ vez, y lleva unos veinte minutos.
 ### 6.2. Crear las tablas
 
 1. En el menú de la izquierda, entrá a **SQL Editor** → **New query**.
-2. Abrí el archivo `supabase/migrations/0001_init.sql` de este proyecto, copiá
+2. Abrí el archivo **`supabase/setup-completo.sql`** de este proyecto, copiá
    **todo** el contenido y pegalo ahí.
 3. Tocá **Run**. Tiene que decir *Success*.
-4. Repetí lo mismo con `supabase/migrations/0002_ultimos_lugares.sql`.
 
-Esto crea las tablas, los permisos y la carpeta de fotos. Se puede volver a
-correr sin romper nada.
+Eso crea las tablas, los permisos y la carpeta de fotos. Se puede volver a
+correr las veces que haga falta: no borra ni duplica nada.
 
-### 6.3. Copiar las claves
+> `setup-completo.sql` se arma solo juntando todo lo que hay en
+> `supabase/migrations/`. Si alguien agrega una migración nueva, hay que correr
+> `npm run armar-sql` para regenerarlo.
+
+### 6.3. Configurar las direcciones de Auth
+
+**Este paso es fácil de saltear y, si se saltea, las invitaciones por email y el
+«entrar con enlace» no funcionan.**
+
+1. Menú → **Authentication** → **URL Configuration**.
+2. En **Site URL** poné la dirección final del sitio
+   (por ejemplo `https://palmatravel.com.py`).
+3. En **Redirect URLs** agregá estas dos, una por línea:
+
+   ```
+   https://palmatravel.com.py/admin
+   http://localhost:3000/admin
+   ```
+
+   (La segunda es para poder probar desde tu computadora.)
+
+4. **Save**.
+
+Si todavía no tenés el dominio definitivo, poné la dirección que te dé Vercel
+(algo como `palma-travel.vercel.app`) y cambialo después.
+
+> **Ojo con los emails:** el servidor de correo que trae Supabase de fábrica
+> está limitado a unos pocos mails por hora, y sirve para probar. Si vas a
+> invitar a varias personas seguidas, conviene conectar un servicio de email
+> propio en **Authentication → Emails → SMTP Settings**.
+
+### 6.4. Copiar las claves
 
 1. **Project Settings** (el engranaje) → **API**.
 2. Copiá:
@@ -225,7 +255,7 @@ correr sin romper nada.
 3. En la computadora, copiá el archivo `.env.example` y llamalo `.env.local`.
    Pegá ahí los tres valores.
 
-### 6.4. Cargar el contenido de ejemplo
+### 6.5. Cargar el contenido de ejemplo
 
 Desde la terminal, en la carpeta del proyecto:
 
@@ -237,7 +267,7 @@ npm run seed
 Eso sube los 6 paquetes y la propuesta de ejemplo. Se puede correr las veces que
 haga falta: actualiza en vez de duplicar.
 
-### 6.5. Crear el primer usuario administrador
+### 6.6. Crear el primer usuario administrador
 
 1. En Supabase: **Authentication** → **Users** → **Add user** → *Create new user*.
 2. Poné tu email y una contraseña. Marcá **Auto Confirm User**.
@@ -252,10 +282,19 @@ haga falta: actualiza en vez de duplicar.
 A partir de ahí, **al resto del equipo lo invitás desde el panel**, en la pantalla
 de Usuarios. No hace falta volver a Supabase nunca más.
 
-### 6.6. Revisar que los permisos quedaron bien
+### 6.7. Revisar que quedó todo bien
 
-En Supabase, entrá a **Table Editor**. Al lado de cada tabla tiene que decir
-*RLS enabled*. Si alguna dice *RLS disabled*, volvé a correr la migración.
+Corré esto y te dice, una por una, si falta algo:
+
+```bash
+npm run verificar
+```
+
+Revisa las claves, que el proyecto responda, que estén las tablas, que el
+contenido esté cargado, que los permisos funcionen de verdad (incluido que las
+propuestas no se puedan listar desde afuera ni filtren las notas internas), que
+la carpeta de fotos sea pública y que haya un administrador. Cuando algo está
+mal, dice exactamente qué hacer.
 
 Con los permisos puestos:
 
@@ -385,6 +424,8 @@ npm run dev                  # http://localhost:3000
 | `npm run typecheck` | Revisa los tipos |
 | `npm run validar-contenido` | Valida los JSON de ejemplo contra el schema |
 | `npm run seed` | Carga el contenido de ejemplo en Supabase |
+| `npm run verificar` | Revisa que Supabase esté bien conectado y con los permisos puestos |
+| `npm run armar-sql` | Regenera `supabase/setup-completo.sql` desde las migraciones |
 
 ### Cómo está armado
 
