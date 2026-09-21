@@ -194,6 +194,10 @@ Solo hay que volver a publicar si alguien cambia el código.
 Supabase es donde viven los datos, los usuarios y las fotos. Se hace una sola
 vez, y lleva unos veinte minutos.
 
+**No hace falta instalar nada ni saber usar una terminal:** todo se hace desde
+la página de Supabase, pegando archivos de texto que ya están preparados en este
+proyecto.
+
 ### 6.1. Crear el proyecto
 
 1. Entrá a [supabase.com](https://supabase.com) y creá una cuenta.
@@ -247,63 +251,101 @@ Si todavía no tenés el dominio definitivo, poné la dirección que te dé Verc
 
 ### 6.4. Copiar las claves
 
-1. **Project Settings** (el engranaje) → **API**.
-2. Copiá:
-   - *Project URL*
-   - *anon public* key
-   - *service_role* key (la secreta)
-3. En la computadora, copiá el archivo `.env.example` y llamalo `.env.local`.
-   Pegá ahí los tres valores.
+En **Project Settings** (el engranaje) → **API** vas a encontrar tres cosas:
+
+| Qué | Cómo se llama en la pantalla |
+|---|---|
+| La dirección del proyecto | *Project URL* |
+| La clave pública | *anon* / *public* |
+| La clave secreta | *service_role* — dice *secret* |
+
+Guardalas en algún lado seguro por un rato. Adónde van depende de cómo trabajes:
+
+- **Si vas a publicar en Vercel** (lo más probable): van cargadas ahí, como
+  variables de entorno. Está explicado en la [sección 5](#5-cómo-publicar-el-sitio).
+  No necesitás ningún archivo en tu computadora.
+- **Si además vas a trabajar en el proyecto desde tu computadora**: copiá el
+  archivo `.env.example`, llamalo `.env.local` y pegá ahí los tres valores.
+
+> ⚠️ La *service_role* es una llave maestra: quien la tenga puede hacer
+> cualquier cosa con la base, saltándose todos los permisos. Nunca la mandes por
+> chat, por mail ni por WhatsApp, y nunca la subas a GitHub.
 
 ### 6.5. Cargar el contenido de ejemplo
 
-Desde la terminal, en la carpeta del proyecto:
+Igual que antes: **SQL Editor** → **New query**, pegás todo el archivo
+**`supabase/datos-de-ejemplo.sql`** y apretás **Run**.
 
-```bash
-npm install
-npm run seed
-```
+Al final te muestra cuántos paquetes y propuestas quedaron cargados. Tienen que
+ser 6 y 1.
 
-Eso sube los 6 paquetes y la propuesta de ejemplo. Se puede correr las veces que
-haga falta: actualiza en vez de duplicar.
+Se puede correr las veces que haga falta: actualiza en vez de duplicar.
 
 ### 6.6. Crear el primer usuario administrador
 
-1. En Supabase: **Authentication** → **Users** → **Add user** → *Create new user*.
-2. Poné tu email y una contraseña. Marcá **Auto Confirm User**.
-3. Volvé a la terminal y corré:
+1. Menú → **Authentication** → **Users** → **Add user** → *Create new user*.
+2. Poné tu email y una contraseña.
+3. **Marcá «Auto Confirm User»** (si no, no vas a poder entrar).
+4. **Create user**.
+5. Volvé al **SQL Editor**, pegá el archivo **`supabase/hacer-admin.sql`**,
+   **cambiá el email de ejemplo por el tuyo en los dos lugares que dice** y
+   apretá **Run**.
 
-   ```bash
-   npm run seed -- --admin=tu@email.com
-   ```
+Te tiene que devolver una fila que dice *«Listo: ya podés entrar al panel con
+este usuario»*.
 
-4. Listo: entrá a `/admin` con ese email y esa contraseña.
+Si te devuelve cero filas, el usuario no existe todavía o el email está escrito
+distinto. Revisá mayúsculas y espacios.
 
-A partir de ahí, **al resto del equipo lo invitás desde el panel**, en la pantalla
-de Usuarios. No hace falta volver a Supabase nunca más.
+> De acá en más, **al resto del equipo lo invitás desde el panel**, en la
+> pantalla de Usuarios. No hace falta volver a Supabase nunca más.
 
 ### 6.7. Revisar que quedó todo bien
 
-Corré esto y te dice, una por una, si falta algo:
+Una última vez: **SQL Editor** → pegás **`supabase/revisar-todo.sql`** → **Run**.
+
+Devuelve una tabla con once revisiones. Todas tienen que decir **OK**:
+
+| Qué revisa | Por qué importa |
+|---|---|
+| Tablas creadas | Que el SQL haya corrido entero |
+| Seguridad por filas (RLS) | Que la base esté protegida |
+| Paquetes ocultos protegidos | Que un paquete oculto no se vea desde afuera |
+| Propuestas no listables | Que nadie pueda sacar la lista de propuestas de clientes |
+| Propuestas se abren por enlace | Que el link que le mandás al cliente funcione |
+| Notas internas protegidas | Que lo que escribís para el equipo no llegue al cliente |
+| Carpeta de fotos | Que las fotos que subas se vean |
+| Paquetes y propuestas cargados | Que el contenido esté |
+| Configuración del sitio | Que el panel tenga de dónde leer |
+| Administrador del panel | Que puedas entrar |
+
+Si alguna dice **PROBLEMA** o **REVISAR**, la columna *Detalle* te dice
+exactamente qué hacer.
+
+### Los cuatro archivos SQL, en orden
+
+| Orden | Archivo | Cuándo |
+|---|---|---|
+| 1 | `supabase/setup-completo.sql` | Una vez, al crear el proyecto |
+| 2 | `supabase/datos-de-ejemplo.sql` | Una vez, para tener contenido de muestra |
+| 3 | `supabase/hacer-admin.sql` | Una vez, después de crear tu usuario |
+| 4 | `supabase/revisar-todo.sql` | Cada vez que quieras confirmar que está todo bien |
+
+Ninguno rompe nada si se corre de más.
+
+### ¿Y si preferís hacerlo desde una terminal?
+
+Si tenés el proyecto clonado y Node instalado, los pasos 2, 3 y 4 tienen su
+equivalente:
 
 ```bash
-npm run verificar
+npm run seed                          # en vez de datos-de-ejemplo.sql
+npm run seed -- --admin=tu@email.com  # en vez de hacer-admin.sql
+npm run verificar                     # en vez de revisar-todo.sql
 ```
 
-Revisa las claves, que el proyecto responda, que estén las tablas, que el
-contenido esté cargado, que los permisos funcionen de verdad (incluido que las
-propuestas no se puedan listar desde afuera ni filtren las notas internas), que
-la carpeta de fotos sea pública y que haya un administrador. Cuando algo está
-mal, dice exactamente qué hacer.
-
-Con los permisos puestos:
-
-- Cualquiera puede ver los paquetes publicados.
-- Nadie de afuera puede ver los paquetes ocultos.
-- **Nadie de afuera puede listar las propuestas.** Solo se puede abrir una si se
-  sabe el enlace exacto, y las notas internas no salen ni siquiera así.
-- Solo el equipo puede cargar y editar.
-- Solo los administradores tocan la configuración y los usuarios.
+Hacen exactamente lo mismo. **No hace falta elegir las dos formas: con una
+alcanza.**
 
 ---
 
