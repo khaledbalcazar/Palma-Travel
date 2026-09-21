@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img">
+  <defs>
+    <linearGradient id="cielopatagonia3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f6f7f7"/>
+      <stop offset="55%" stop-color="#9caaa6"/>
+      <stop offset="100%" stop-color="#2c3835"/>
+    </linearGradient>
+    <linearGradient id="tierrapatagonia3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2c3835"/>
+      <stop offset="100%" stop-color="#2c3835" stop-opacity="0.82"/>
+    </linearGradient>
+    <radialGradient id="solpatagonia3">
+      <stop offset="0%" stop-color="#c5cecb" stop-opacity="0.95"/>
+      <stop offset="70%" stop-color="#c5cecb" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#c5cecb" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#cielopatagonia3)"/>
+  <circle cx="752" cy="355" r="260" fill="url(#solpatagonia3)"/>
+  <circle cx="752" cy="355" r="58" fill="#c5cecb" opacity="0.9"/>
+  <path d="M0,900 L0,620 L180.90558174764737,435.9022296592593 L361.81116349529475,741.898110313341 L466.71510270796716,516.3616623124108 L571.6190419206396,722.1151812002063 L768.264851688873,475.97540085203946 L964.9106614571065,767.4118006322533 L1129.051353847608,453.5283464053646 L1293.1920462381095,710.5027922429144 L1482.2562308586203,345.0276135466993 L1671.320415479131,737.1051446255296 L1600,900 Z" fill="url(#tierrapatagonia3)"/>
+  <rect y="820" width="1600" height="80" fill="#2c3835" opacity="0.35"/>
+</svg>

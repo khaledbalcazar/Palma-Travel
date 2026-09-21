@@ -1,0 +1,90 @@
+{
+  "slug": "europa-clasica-madrid-paris-roma",
+  "titulo": "Europa clásica: Madrid, París y Roma en grupo",
+  "destino": "Madrid, París y Roma",
+  "pais": "España, Francia e Italia",
+  "region": "europa",
+  "estado": "activo",
+  "tipoViaje": ["cultura", "ciudad", "gastronomia"],
+  "idealPara": ["pareja", "amigos", "adultos-mayores", "grupo"],
+  "ritmo": "intenso",
+  "duracionDias": 14,
+  "duracionNoches": 13,
+  "fechasSalida": ["2027-04-10", "2027-09-18"],
+  "salidaGrupal": true,
+  "coordinadores": ["Silvia Ayala", "Rodrigo Palma"],
+  "precioDesde": 3480,
+  "moneda": "USD",
+  "basePrecio": "por persona en base doble",
+  "vigenciaPrecio": "2026-12-20",
+  "incluyeVuelo": true,
+  "incluye": [
+    "Pasaje aéreo Asunción – Madrid // Roma – Asunción con equipaje de 23 kg",
+    "Tren de alta velocidad Madrid – París y vuelo interno París – Roma",
+    "13 noches en hoteles 4 estrellas céntricos con desayuno buffet",
+    "Coordinador paraguayo acompañando al grupo durante todo el viaje",
+    "Visitas panorámicas con guía local en Madrid, París y Roma",
+    "Entrada al Museo del Louvre y a los Museos Vaticanos con horario reservado",
+    "Traslados de todos los aeropuertos y estaciones",
+    "Asistencia al viajero con cobertura Schengen",
+    "Impuestos aéreos y tasas de embarque"
+  ],
+  "noIncluye": [
+    "Almuerzos y cenas, salvo la cena de bienvenida en Madrid",
+    "Excursiones opcionales (Toledo, Versalles, Pompeya)",
+    "City tax de los hoteles, que se abona en destino (aproximadamente 4 a 7 euros por noche)",
+    "Propinas a guías y choferes",
+    "Gastos personales"
+  ],
+  "itinerario": [
+    { "dia": 1, "titulo": "Asunción – Madrid", "descripcion": "Encuentro con el coordinador en el aeropuerto de Asunción y salida rumbo a Madrid. Noche a bordo." },
+    { "dia": 2, "titulo": "Llegada a Madrid", "descripcion": "Llegada, traslado al hotel y tiempo para descansar del vuelo. A la tarde, primera caminata por la Puerta del Sol y la Plaza Mayor. Cena de bienvenida con todo el grupo." },
+    { "dia": 3, "titulo": "Madrid a fondo", "descripcion": "Visita panorámica con guía local: Palacio Real, Gran Vía, barrio de las Letras y Parque del Retiro. Tarde libre para el Museo del Prado o para perderse en el Rastro." },
+    { "dia": 4, "titulo": "Madrid / Toledo (opcional)", "descripcion": "Día libre. Recomendamos la excursión opcional a Toledo, la ciudad de las tres culturas, a una hora de Madrid." },
+    { "dia": 5, "titulo": "Madrid – París en tren", "descripcion": "Traslado a la estación y viaje en tren de alta velocidad a París. Llegada, traslado al hotel y tarde libre." },
+    { "dia": 6, "titulo": "París panorámica", "descripcion": "Visita con guía local: Torre Eiffel, Campos Elíseos, Arco del Triunfo, Notre Dame y Barrio Latino. A la noche, opción de paseo en bateau mouche por el Sena." },
+    { "dia": 7, "titulo": "Museo del Louvre", "descripcion": "Entrada con horario reservado al Louvre por la mañana, con tiempo para las obras principales. Tarde libre en Montmartre y el Sacré-Cœur." },
+    { "dia": 8, "titulo": "París / Versalles (opcional)", "descripcion": "Día libre. Excursión opcional al Palacio de Versalles y sus jardines." },
+    { "dia": 9, "titulo": "París – Roma", "descripcion": "Traslado al aeropuerto y vuelo a Roma. Llegada, traslado al hotel y primera caminata por la Fontana di Trevi y la Plaza de España." },
+    { "dia": 10, "titulo": "Roma imperial", "descripcion": "Visita con guía local al Coliseo, Foro Romano y Palatino. Tarde libre en el Trastevere." },
+    { "dia": 11, "titulo": "Vaticano", "descripcion": "Entrada con horario reservado a los Museos Vaticanos, la Capilla Sixtina y la Basílica de San Pedro. Tarde libre." },
+    { "dia": 12, "titulo": "Roma libre / Pompeya (opcional)", "descripcion": "Día libre. Excursión opcional de día completo a Pompeya y la costa napolitana." },
+    { "dia": 13, "titulo": "Último día en Roma", "descripcion": "Mañana libre para compras y para despedirse de la ciudad. A la tarde, traslado al aeropuerto." },
+    { "dia": 14, "titulo": "Llegada a Asunción", "descripcion": "Llegada a Asunción y fin de nuestros servicios." }
+  ],
+  "alojamiento": [
+    { "nombre": "Hotel Mayorazgo", "categoria": "4 estrellas", "noches": 4, "ciudad": "Madrid" },
+    { "nombre": "Hôtel Mercure La Sorbonne", "categoria": "4 estrellas", "noches": 4, "ciudad": "París" },
+    { "nombre": "Hotel Diocleziano", "categoria": "4 estrellas", "noches": 5, "ciudad": "Roma" }
+  ],
+  "highlights": [
+    "Salida grupal con coordinador paraguayo de principio a fin",
+    "Tres capitales en un solo viaje, sin tener que organizar nada",
+    "Louvre y Museos Vaticanos con entrada reservada, sin filas eternas",
+    "Hoteles 4 estrellas en zonas céntricas, para salir caminando",
+    "Tren de alta velocidad Madrid – París incluido"
+  ],
+  "imagenPortada": { "src": "/muestra/europa-portada.svg", "alt": "Ilustración del perfil de una ciudad europea con edificios de distintas alturas al atardecer" },
+  "galeria": [
+    { "src": "/muestra/europa-1.svg", "alt": "Ilustración de una silueta urbana con torres y cúpulas" },
+    { "src": "/muestra/europa-2.svg", "alt": "Ilustración de un edificio histórico con frontón triangular" },
+    { "src": "/muestra/europa-3.svg", "alt": "Ilustración de un casco urbano denso bajo un cielo cálido" }
+  ],
+  "documentacion": [
+    { "titulo": "Pasaporte", "detalle": "Obligatorio, con validez mínima de 6 meses desde la fecha de regreso y al menos dos páginas libres." },
+    { "titulo": "Visa", "detalle": "Los ciudadanos paraguayos no necesitan visa para estadías turísticas de hasta 90 días en el espacio Schengen." },
+    { "titulo": "Autorización ETIAS", "detalle": "A partir de su entrada en vigencia, se requerirá la autorización electrónica ETIAS. Nosotros te avisamos y te ayudamos a tramitarla cuando corresponda." },
+    { "titulo": "Seguro médico", "detalle": "El espacio Schengen exige cobertura médica mínima. Ya está incluida en el paquete con la asistencia al viajero." },
+    { "titulo": "Vacunas", "detalle": "No se exigen vacunas para ingresar a España, Francia ni Italia." }
+  ],
+  "basesYCondiciones": "Precios expresados en dólares americanos por persona en base doble, sujetos a disponibilidad y a confirmación al momento de la reserva. La salida grupal requiere un mínimo de 15 pasajeros; de no alcanzarse, Palma Travel podrá reprogramar la fecha o reintegrar la totalidad de lo abonado. Las tarifas aéreas pueden variar hasta la emisión de los pasajes. La reserva se confirma con una seña de 800 dólares por persona y el saldo debe abonarse 45 días antes de la salida. Cancelaciones con más de 60 días de anticipación: se retiene la seña. Entre 60 y 30 días: se retiene el 50%. Con menos de 30 días o no presentación: sin reintegro. El orden de las visitas puede modificarse por razones operativas sin alterar el contenido del programa. Los servicios no utilizados no son reembolsables. Palma Travel actúa como intermediario entre el pasajero y los prestadores de servicios, por lo que no se responsabiliza por hechos ajenos a su control. Es responsabilidad del pasajero contar con la documentación exigida por los países de destino.",
+  "faq": [
+    { "pregunta": "¿Qué hace el coordinador?", "respuesta": "Viaja con el grupo desde Asunción y vuelve con el grupo. Se ocupa del check in, los traslados, los horarios y de resolver cualquier imprevisto, para que vos solo te dediques a disfrutar." },
+    { "pregunta": "¿Puedo viajar solo y compartir habitación?", "respuesta": "Sí. Si viajás solo te buscamos a alguien del grupo para compartir. Si preferís habitación individual, tiene un suplemento." },
+    { "pregunta": "¿Cuánto hay que caminar por día?", "respuesta": "Es un viaje de ritmo intenso: hay días de 12.000 a 15.000 pasos. Recomendamos calzado cómodo. Si necesitás un ritmo más tranquilo, podemos armarte el mismo recorrido a tu medida." },
+    { "pregunta": "¿Cuándo conviene reservar?", "respuesta": "Cuanto antes mejor. Los cupos de las salidas grupales son limitados y las tarifas aéreas suben a medida que se acerca la fecha." }
+  ],
+  "tags": ["europa", "madrid", "paris", "roma", "grupal", "coordinador", "cultura", "museos"],
+  "destacado": true,
+  "esEjemplo": true
+}

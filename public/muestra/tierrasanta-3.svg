@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img">
+  <defs>
+    <linearGradient id="cielotierrasanta3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f2e6d4"/>
+      <stop offset="55%" stop-color="#72b6a1"/>
+      <stop offset="100%" stop-color="#164a3f"/>
+    </linearGradient>
+    <linearGradient id="tierratierrasanta3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#164a3f"/>
+      <stop offset="100%" stop-color="#164a3f" stop-opacity="0.82"/>
+    </linearGradient>
+    <radialGradient id="soltierrasanta3">
+      <stop offset="0%" stop-color="#c5a273" stop-opacity="0.95"/>
+      <stop offset="70%" stop-color="#c5a273" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#c5a273" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#cielotierrasanta3)"/>
+  <circle cx="405" cy="330" r="260" fill="url(#soltierrasanta3)"/>
+  <circle cx="405" cy="330" r="58" fill="#c5a273" opacity="0.9"/>
+  <path d="M0,900 L0,660 Q88.89777575270273,622.5154198333621 177.79555150540546,711.684189196676 Q274.72082992084324,611.1979227419943 371.64610833628103,673.7868498265743 Q445.1591842074413,553.1548207812011 518.6722600786015,650.9259903617203 Q598.603487862274,616.500373641029 678.5347156459466,715.1753270253539 Q747.992846617708,632.2465035319328 817.4509775894694,653.0797648243606 Q874.1751142591238,619.5713379513472 930.8992509287782,673.0877486616373 Q1011.4269912813324,561.2703143246472 1091.9547316338867,678.8529267348349 Q1142.4462069943547,563.1424023676664 1192.9376823548228,663.752797730267 Q1257.8662034554873,560.4852341488004 1322.7947245561518,688.4664591215551 Q1409.8454543109983,586.9961923267692 1496.8961840658449,656.907248198986 Q1603.8036913250107,573.2891962490976 1710.7111985841766,711.8097906000912 L1600,900 Z" fill="url(#tierratierrasanta3)"/>
+  <rect y="820" width="1600" height="80" fill="#164a3f" opacity="0.35"/>
+</svg>

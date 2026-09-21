@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img">
+  <defs>
+    <linearGradient id="cielomisionesportada" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#faf3e8"/>
+      <stop offset="55%" stop-color="#a8865a"/>
+      <stop offset="100%" stop-color="#43372a"/>
+    </linearGradient>
+    <linearGradient id="tierramisionesportada" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43372a"/>
+      <stop offset="100%" stop-color="#43372a" stop-opacity="0.82"/>
+    </linearGradient>
+    <radialGradient id="solmisionesportada">
+      <stop offset="0%" stop-color="#e56b4e" stop-opacity="0.95"/>
+      <stop offset="70%" stop-color="#e56b4e" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#e56b4e" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#cielomisionesportada)"/>
+  <circle cx="1047" cy="192" r="260" fill="url(#solmisionesportada)"/>
+  <circle cx="1047" cy="192" r="58" fill="#e56b4e" opacity="0.9"/>
+  <path d="M0,900 L0,760 L560,760 L560,600 L680,600 L800,380 L920,600 L1040,600 L1040,760 L1600,760 L1600,900 Z" fill="url(#tierramisionesportada)"/>
+  <rect y="820" width="1600" height="80" fill="#43372a" opacity="0.35"/>
+</svg>

@@ -1,0 +1,67 @@
+/* ---------------------------------------------------------------
+   Hoja de impresión: para que "Guardar como PDF" desde el navegador
+   produzca un documento prolijo, parecido al PDF que se mandaba antes.
+   --------------------------------------------------------------- */
+@media print {
+  @page {
+    size: A4;
+    margin: 16mm 14mm;
+  }
+
+  html, body {
+    background: #fff !important;
+    color: #14201c !important;
+    font-size: 11pt;
+  }
+
+  /* Fuera todo lo que no sirve en papel */
+  [data-print="ocultar"],
+  header[data-sitio],
+  footer[data-sitio],
+  nav,
+  button,
+  .sticky,
+  [data-lightbox] {
+    display: none !important;
+  }
+
+  /* Los acordeones se imprimen abiertos */
+  details { break-inside: avoid; }
+  details > summary { list-style: none; font-weight: 600; }
+  details > summary::-webkit-details-marker { display: none; }
+  [data-print="abrir"] { display: block !important; height: auto !important; overflow: visible !important; }
+
+  h1 { font-size: 22pt; margin-bottom: 4mm; }
+  h2 { font-size: 14pt; margin-top: 8mm; break-after: avoid; }
+  h3 { font-size: 12pt; break-after: avoid; }
+
+  section, li, tr, figure { break-inside: avoid; }
+
+  img {
+    max-height: 70mm;
+    width: auto !important;
+    break-inside: avoid;
+  }
+
+  /* Sin sombras ni fondos que gasten tinta */
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* Mostrar la URL de los links para poder tipearlos */
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 8pt;
+    color: #52635e;
+    word-break: break-all;
+  }
+  a[href^="http"][data-print="sin-url"]::after { content: ""; }
+
+  .contenedor { max-width: none !important; padding: 0 !important; }
+
+  /* Pie de página impreso */
+  [data-print="pie"] { display: block !important; }
+}
+
+[data-print="pie"] { display: none; }

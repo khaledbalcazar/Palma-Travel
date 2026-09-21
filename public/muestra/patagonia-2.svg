@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img">
+  <defs>
+    <linearGradient id="cielopatagonia2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a7d3c4"/>
+      <stop offset="55%" stop-color="#2b7563"/>
+      <stop offset="100%" stop-color="#0a2b24"/>
+    </linearGradient>
+    <linearGradient id="tierrapatagonia2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a2b24"/>
+      <stop offset="100%" stop-color="#0a2b24" stop-opacity="0.82"/>
+    </linearGradient>
+    <radialGradient id="solpatagonia2">
+      <stop offset="0%" stop-color="#e7d3b6" stop-opacity="0.95"/>
+      <stop offset="70%" stop-color="#e7d3b6" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#e7d3b6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#cielopatagonia2)"/>
+  <circle cx="1206" cy="327" r="260" fill="url(#solpatagonia2)"/>
+  <circle cx="1206" cy="327" r="58" fill="#e7d3b6" opacity="0.9"/>
+  <path d="M0,900 L0,660 Q98.69174376130104,584.8529806453735 197.38348752260208,690.6245980039239 Q248.78429690958,598.626358769834 300.18510629655793,698.7730098329484 Q380.18567769788206,587.3037672694772 460.1862490992062,687.6949222385883 Q545.262506158324,533.1552238576114 630.3387632174417,711.5464982576668 Q735.3807100374252,523.4614482615143 840.4226568574086,650.3304358944297 Q891.6729052423034,529.2996035516262 942.9231536271982,673.9532849006355 Q1012.6513214595616,527.2103069256991 1082.379489291925,696.3091040402651 Q1135.738538095029,568.0985939688981 1189.0975868981332,706.9694911874831 Q1243.2010669074953,622.2898492682725 1297.3045469168574,719.7876187041402 Q1362.5430661684368,615.2645910158753 1427.7815854200162,667.7925710938871 Q1479.513546237722,616.7837108578533 1531.2455070554279,649.762549996376 Q1598.5227585223038,616.6319750808179 1665.8000099891797,671.0997034795582 L1600,900 Z" fill="url(#tierrapatagonia2)"/>
+  <rect y="820" width="1600" height="80" fill="#0a2b24" opacity="0.35"/>
+</svg>

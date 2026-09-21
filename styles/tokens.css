@@ -1,0 +1,78 @@
+/* ---------------------------------------------------------------
+   PALETA DE MARCA — Palma Travel
+   Para cambiar los colores de la marca, editá SOLO este archivo.
+   Cada color tiene una escala 50..900. El resto del sitio usa
+   clases tipo `bg-palma-600`, `text-arena-200`, `bg-coral-500`.
+   --------------------------------------------------------------- */
+@theme {
+  /* Verde profundo — color principal (palmeras, selva) */
+  --color-palma-50: #eef6f3;
+  --color-palma-100: #d3e9e1;
+  --color-palma-200: #a7d3c4;
+  --color-palma-300: #72b6a1;
+  --color-palma-400: #46937c;
+  --color-palma-500: #2b7563;
+  --color-palma-600: #1d5c4d;
+  --color-palma-700: #164a3f;
+  --color-palma-800: #0f3d33;
+  --color-palma-900: #0a2b24;
+
+  /* Arena — fondos cálidos */
+  --color-arena-50: #fdfaf5;
+  --color-arena-100: #faf3e8;
+  --color-arena-200: #f2e6d4;
+  --color-arena-300: #e7d3b6;
+  --color-arena-400: #d8bc94;
+  --color-arena-500: #c5a273;
+  --color-arena-600: #a8865a;
+  --color-arena-700: #866a47;
+  --color-arena-800: #63503a;
+  --color-arena-900: #43372a;
+
+  /* Coral — acento, CTAs secundarios, badges */
+  --color-coral-50: #fef3f0;
+  --color-coral-100: #fde3dc;
+  --color-coral-200: #fac7ba;
+  --color-coral-300: #f5a28c;
+  --color-coral-400: #ed7e62;
+  --color-coral-500: #e56b4e;
+  --color-coral-600: #cc4e30;
+  --color-coral-700: #a83d24;
+  --color-coral-800: #843222;
+  --color-coral-900: #5c2519;
+
+  /* Tinta — textos */
+  --color-tinta-50: #f6f7f7;
+  --color-tinta-100: #e3e7e6;
+  --color-tinta-200: #c5cecb;
+  --color-tinta-300: #9caaa6;
+  --color-tinta-400: #6f817c;
+  --color-tinta-500: #52635e;
+  --color-tinta-600: #3d4c48;
+  --color-tinta-700: #2c3835;
+  --color-tinta-800: #1d2825;
+  --color-tinta-900: #14201c;
+
+  /* Verde WhatsApp — se usa tal cual, es color de marca de terceros */
+  --color-whatsapp: #25d366;
+  --color-whatsapp-dark: #1da851;
+
+  /* Tipografía */
+  --font-display: var(--font-fraunces), "Georgia", "Times New Roman", serif;
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Bordes suaves */
+  --radius-xs: 0.375rem;
+  --radius-sm: 0.625rem;
+  --radius-md: 0.875rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.75rem;
+  --radius-2xl: 2.25rem;
+
+  /* Sombras suaves, sin el look de plantilla */
+  --shadow-suave: 0 1px 2px rgb(20 32 28 / 0.04), 0 8px 24px -8px rgb(20 32 28 / 0.10);
+  --shadow-alta: 0 2px 4px rgb(20 32 28 / 0.05), 0 20px 48px -16px rgb(20 32 28 / 0.22);
+
+  /* Ritmo vertical generoso */
+  --spacing-seccion: 5rem;
+}

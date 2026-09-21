@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img">
+  <defs>
+    <linearGradient id="cieloherohome" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f2e6d4"/>
+      <stop offset="55%" stop-color="#22b8cf"/>
+      <stop offset="100%" stop-color="#0e7490"/>
+    </linearGradient>
+    <linearGradient id="tierraherohome" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0e7490"/>
+      <stop offset="100%" stop-color="#0e7490" stop-opacity="0.82"/>
+    </linearGradient>
+    <radialGradient id="solherohome">
+      <stop offset="0%" stop-color="#e56b4e" stop-opacity="0.95"/>
+      <stop offset="70%" stop-color="#e56b4e" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#e56b4e" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#cieloherohome)"/>
+  <circle cx="1055" cy="299" r="260" fill="url(#solherohome)"/>
+  <circle cx="1055" cy="299" r="58" fill="#e56b4e" opacity="0.9"/>
+  <path d="M0,900 L0,700 Q400,667.8748799208552 800,700 T1600,690 L1600,900 Z" fill="url(#tierraherohome)"/>
+  <rect y="820" width="1600" height="80" fill="#0e7490" opacity="0.35"/>
+</svg>

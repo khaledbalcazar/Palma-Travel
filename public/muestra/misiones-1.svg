@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img">
+  <defs>
+    <linearGradient id="cielomisiones1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a7d3c4"/>
+      <stop offset="55%" stop-color="#2b7563"/>
+      <stop offset="100%" stop-color="#0a2b24"/>
+    </linearGradient>
+    <linearGradient id="tierramisiones1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a2b24"/>
+      <stop offset="100%" stop-color="#0a2b24" stop-opacity="0.82"/>
+    </linearGradient>
+    <radialGradient id="solmisiones1">
+      <stop offset="0%" stop-color="#e7d3b6" stop-opacity="0.95"/>
+      <stop offset="70%" stop-color="#e7d3b6" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#e7d3b6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#cielomisiones1)"/>
+  <circle cx="903" cy="206" r="260" fill="url(#solmisiones1)"/>
+  <circle cx="903" cy="206" r="58" fill="#e7d3b6" opacity="0.9"/>
+  <path d="M0,900 L0,660 Q76.07602996518835,592.2256431635469 152.1520599303767,651.3433064520359 Q226.44878915394656,535.7943646423519 300.7455183775164,682.0896449871361 Q349.9767344794236,585.2180528733879 399.2079505813308,685.1914885267615 Q494.034875103971,634.250090867281 588.8617996266112,640.5526783876121 Q671.1381441424601,608.0609137844294 753.414488658309,707.2301227599382 Q862.5795831799041,629.4824180193245 971.7446777014993,673.4545152820647 Q1062.1921223844402,627.4559206236154 1152.639567067381,703.0694534257054 Q1247.0792659500148,621.7729863896966 1341.5189648326486,685.6656443141401 Q1407.2275032079779,529.5697472896427 1472.936041583307,687.9569661617279 Q1573.1744943081867,613.9070125482976 1673.4129470330663,665.5934079177678 L1600,900 Z" fill="url(#tierramisiones1)"/>
+  <rect y="820" width="1600" height="80" fill="#0a2b24" opacity="0.35"/>
+</svg>

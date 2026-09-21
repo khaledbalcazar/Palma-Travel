@@ -1,0 +1,78 @@
+{
+  "slug": "punta-cana-todo-incluido",
+  "titulo": "Punta Cana all inclusive: siete días sin pensar en nada",
+  "destino": "Punta Cana",
+  "pais": "República Dominicana",
+  "region": "caribe",
+  "estado": "activo",
+  "tipoViaje": ["playa", "relax", "gastronomia"],
+  "idealPara": ["pareja", "familia", "amigos"],
+  "ritmo": "tranquilo",
+  "duracionDias": 8,
+  "duracionNoches": 7,
+  "fechasSalida": ["2026-11-14", "2026-12-05", "2027-01-16", "2027-02-13"],
+  "salidaGrupal": false,
+  "coordinadores": [],
+  "precioDesde": 1850,
+  "moneda": "USD",
+  "basePrecio": "por persona en base doble",
+  "vigenciaPrecio": "2026-10-31",
+  "incluyeVuelo": true,
+  "incluye": [
+    "Pasaje aéreo Asunción – Punta Cana – Asunción con conexiones y equipaje de 23 kg",
+    "7 noches en resort 5 estrellas régimen all inclusive (todas las comidas y bebidas incluidas)",
+    "Traslados aeropuerto – resort – aeropuerto",
+    "Acceso a piscinas, playa privada, gimnasio y actividades del resort",
+    "Shows nocturnos y entretenimiento del hotel",
+    "Asistencia al viajero con cobertura ampliada",
+    "Impuestos aéreos, tasas de embarque y tarjeta de turista"
+  ],
+  "noIncluye": [
+    "Excursiones fuera del resort (Isla Saona, Hoyo Azul, catamarán)",
+    "Tratamientos de spa y deportes acuáticos motorizados",
+    "Propinas",
+    "Gastos personales"
+  ],
+  "itinerario": [
+    { "dia": 1, "titulo": "Asunción – Punta Cana", "descripcion": "Salida desde Asunción con conexión. Llegada a Punta Cana, recepción en el aeropuerto y traslado al resort. Check in, pulsera all inclusive y primera cena en el buffet." },
+    { "dia": 2, "titulo": "Playa Bávaro", "descripcion": "Primer día completo de descanso. Playa de arena blanca, reposeras, piscina y almuerzo en cualquiera de los restaurantes del resort. A la noche, show en el teatro del hotel." },
+    { "dia": 3, "titulo": "Día libre", "descripcion": "Día libre para disfrutar el resort. Buen momento para reservar una excursión opcional a Isla Saona, que sale temprano al día siguiente." },
+    { "dia": 4, "titulo": "Día libre / Isla Saona (opcional)", "descripcion": "Día libre. Opcionalmente, excursión de día completo en catamarán y lancha rápida a Isla Saona, con almuerzo y piscina natural en el mar." },
+    { "dia": 5, "titulo": "Día libre", "descripcion": "Descanso, deportes náuticos sin motor incluidos (kayak, snorkel, windsurf) y restaurantes temáticos a la carta." },
+    { "dia": 6, "titulo": "Día libre / Hoyo Azul (opcional)", "descripcion": "Día libre. Opción de excursión al parque Scape Park y al cenote Hoyo Azul, con tirolesas y baño en agua turquesa." },
+    { "dia": 7, "titulo": "Último día completo", "descripcion": "Último día para aprovechar la playa, el spa o simplemente no hacer nada. Compras de último momento en las tiendas del resort." },
+    { "dia": 8, "titulo": "Punta Cana – Asunción", "descripcion": "Desayuno, check out y traslado al aeropuerto para el vuelo de regreso a Asunción." }
+  ],
+  "alojamiento": [
+    { "nombre": "Grand Bávaro Beach Resort & Spa", "categoria": "5 estrellas all inclusive", "noches": 7, "ciudad": "Punta Cana" }
+  ],
+  "highlights": [
+    "Todo incluido de verdad: comidas, bebidas, snacks y shows",
+    "Playa privada en Bávaro, de las mejores del Caribe",
+    "Resort apto para chicos, con club infantil y piscinas separadas",
+    "Cuatro fechas de salida entre noviembre y febrero",
+    "Cobertura de asistencia al viajero ampliada incluida"
+  ],
+  "imagenPortada": { "src": "/muestra/puntacana-portada.svg", "alt": "Ilustración de una playa caribeña con agua turquesa y cielo despejado" },
+  "galeria": [
+    { "src": "/muestra/puntacana-1.svg", "alt": "Ilustración de una costa tropical de arena blanca" },
+    { "src": "/muestra/puntacana-2.svg", "alt": "Ilustración del mar en calma bajo un sol alto" },
+    { "src": "/muestra/puntacana-3.svg", "alt": "Ilustración de una laguna turquesa rodeada de vegetación baja" }
+  ],
+  "documentacion": [
+    { "titulo": "Pasaporte", "detalle": "Obligatorio, con una validez mínima de 6 meses desde la fecha de regreso." },
+    { "titulo": "Visa", "detalle": "Los ciudadanos paraguayos no necesitan visa. La tarjeta de turista está incluida en el precio del paquete." },
+    { "titulo": "Vacunas", "detalle": "No hay vacunas obligatorias. Se recomienda repelente de mosquitos y protector solar alto." },
+    { "titulo": "Formulario de entrada", "detalle": "República Dominicana pide completar un formulario electrónico de entrada y salida (E-Ticket). Te lo enviamos completado unos días antes del viaje." }
+  ],
+  "basesYCondiciones": "Precios expresados en dólares americanos por persona en base doble, sujetos a disponibilidad y a confirmación al momento de la reserva. Las tarifas aéreas pueden variar hasta la emisión de los pasajes. La reserva se confirma con una seña del 30% y el saldo debe abonarse 30 días antes de la salida. Cancelaciones con más de 45 días de anticipación: se retiene el 15% en concepto de gastos administrativos. Entre 45 y 21 días: se retiene el 50%. Con menos de 21 días o no presentación: sin reintegro. El régimen all inclusive comienza con el check in y finaliza con el check out según las políticas del resort. Los servicios no utilizados no son reembolsables. Palma Travel actúa como intermediario entre el pasajero y los prestadores de servicios, por lo que no se responsabiliza por hechos ajenos a su control. Es responsabilidad del pasajero contar con la documentación exigida por el país de destino.",
+  "faq": [
+    { "pregunta": "¿Cuántas escalas tiene el vuelo?", "respuesta": "Según la fecha, una o dos escalas, normalmente por São Paulo o Panamá. Te confirmamos la ruta exacta antes de reservar." },
+    { "pregunta": "¿Los chicos pagan lo mismo?", "respuesta": "No. Los menores compartiendo habitación con dos adultos tienen tarifa reducida y según la edad pueden ser gratis. Escribinos con las edades y te pasamos el precio exacto." },
+    { "pregunta": "¿Las bebidas alcohólicas están incluidas?", "respuesta": "Sí, el régimen all inclusive incluye bebidas nacionales e internacionales sin límite dentro del resort." },
+    { "pregunta": "¿Conviene contratar las excursiones desde acá?", "respuesta": "Podés hacerlo con nosotros antes de viajar o en el resort. Reservando con anticipación suele salir algo más barato y te asegurás el cupo." }
+  ],
+  "tags": ["caribe", "all inclusive", "playa", "resort", "luna de miel", "familia"],
+  "destacado": true,
+  "esEjemplo": true
+}

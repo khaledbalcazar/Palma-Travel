@@ -1,0 +1,72 @@
+{
+  "slug": "rio-de-janeiro-verano",
+  "titulo": "Río de Janeiro: playa, samba y Pan de Azúcar",
+  "destino": "Río de Janeiro",
+  "pais": "Brasil",
+  "region": "sudamerica",
+  "estado": "activo",
+  "tipoViaje": ["playa", "ciudad", "gastronomia"],
+  "idealPara": ["pareja", "amigos", "familia"],
+  "ritmo": "moderado",
+  "duracionDias": 6,
+  "duracionNoches": 5,
+  "fechasSalida": "flexible",
+  "salidaGrupal": false,
+  "coordinadores": [],
+  "precioDesde": 890,
+  "moneda": "USD",
+  "basePrecio": "por persona en base doble",
+  "vigenciaPrecio": "2026-11-30",
+  "incluyeVuelo": true,
+  "incluye": [
+    "Pasaje aéreo Asunción – Río de Janeiro – Asunción con equipaje de mano y una valija de 23 kg",
+    "5 noches de alojamiento en Copacabana con desayuno buffet",
+    "Traslados aeropuerto – hotel – aeropuerto en servicio compartido",
+    "Excursión de día completo al Cristo Redentor y Pan de Azúcar con guía en español",
+    "Asistencia al viajero por todo el período del viaje",
+    "Impuestos aéreos y tasas de embarque"
+  ],
+  "noIncluye": [
+    "Almuerzos y cenas, salvo lo indicado",
+    "Excursiones opcionales (Petrópolis, favela tour, paseo en barco)",
+    "Propinas a guías y choferes",
+    "Gastos personales"
+  ],
+  "itinerario": [
+    { "dia": 1, "titulo": "Asunción – Río de Janeiro", "descripcion": "Salida desde el Aeropuerto Silvio Pettirossi. Llegada a Río, recepción en el aeropuerto y traslado al hotel en Copacabana. Resto del día libre para dar la primera caminata por la orilla y comer un açaí frente al mar." },
+    { "dia": 2, "titulo": "Cristo Redentor y Pan de Azúcar", "descripcion": "Día completo de visita. Subida en tren al Corcovado para ver el Cristo Redentor y toda la bahía desde arriba. Por la tarde, teleférico al Morro da Urca y al Pan de Azúcar para el atardecer. Guía en español." },
+    { "dia": 3, "titulo": "Día libre de playa", "descripcion": "Día entero para disfrutar Copacabana e Ipanema a tu ritmo. Te dejamos recomendaciones de dónde alquilar sombrilla, dónde comer bien sin gastar de más y cómo llegar caminando al Arpoador para ver la puesta de sol." },
+    { "dia": 4, "titulo": "Centro histórico y Santa Teresa", "descripcion": "Mañana libre. Sugerimos recorrer la Escalera de Selarón, el barrio bohemio de Santa Teresa y el Theatro Municipal. A la noche, opción de cena con show de samba en Lapa (opcional)." },
+    { "dia": 5, "titulo": "Día libre", "descripcion": "Último día completo. Buen momento para una excursión opcional a Petrópolis, un paseo en barco por la bahía de Guanabara o simplemente más playa y compras en Ipanema." },
+    { "dia": 6, "titulo": "Río de Janeiro – Asunción", "descripcion": "Desayuno en el hotel, tiempo libre según el horario del vuelo y traslado al aeropuerto para el regreso a Asunción." }
+  ],
+  "alojamiento": [
+    { "nombre": "Hotel Astoria Copacabana", "categoria": "3 estrellas superior", "noches": 5, "ciudad": "Río de Janeiro" }
+  ],
+  "highlights": [
+    "Cristo Redentor y Pan de Azúcar en un solo día, con guía en español",
+    "Hotel a una cuadra de la playa de Copacabana",
+    "Dos días enteros libres para hacer tu propio plan",
+    "Vuelo directo desde Asunción incluido"
+  ],
+  "imagenPortada": { "src": "/muestra/rio-portada.svg", "alt": "Ilustración de una costa tropical al atardecer, con el sol bajo sobre el mar" },
+  "galeria": [
+    { "src": "/muestra/rio-1.svg", "alt": "Ilustración del perfil de una ciudad con edificios altos contra el cielo" },
+    { "src": "/muestra/rio-2.svg", "alt": "Ilustración de una playa de arena clara con el mar en calma" },
+    { "src": "/muestra/rio-3.svg", "alt": "Ilustración de cerros verdes recortados sobre un cielo cálido" }
+  ],
+  "documentacion": [
+    { "titulo": "Documento de identidad", "detalle": "Los paraguayos pueden entrar a Brasil con la cédula de identidad vigente y en buen estado, o con el pasaporte. Para menores de edad que viajan sin uno de los padres se necesita autorización." },
+    { "titulo": "Visa", "detalle": "No se necesita visa para ciudadanos paraguayos." },
+    { "titulo": "Vacunas", "detalle": "No es obligatoria, pero se recomienda la vacuna contra la fiebre amarilla al menos 10 días antes del viaje." }
+  ],
+  "basesYCondiciones": "Precios expresados en dólares americanos por persona en base doble, sujetos a disponibilidad y a confirmación al momento de la reserva. Las tarifas aéreas pueden variar hasta la emisión de los pasajes. La reserva se confirma con una seña del 30% y el saldo debe abonarse 21 días antes de la salida. Cancelaciones con más de 30 días de anticipación: se retiene el 10% en concepto de gastos administrativos. Entre 30 y 15 días: se retiene el 50%. Con menos de 15 días o no presentación: sin reintegro. Los servicios no utilizados durante el viaje no son reembolsables ni canjeables. Palma Travel actúa como intermediario entre el pasajero y los prestadores de servicios (aerolíneas, hoteles, operadores terrestres), por lo que no se responsabiliza por hechos ajenos a su control como demoras, cancelaciones o modificaciones dispuestas por dichos prestadores, condiciones climáticas o causas de fuerza mayor. Es responsabilidad del pasajero contar con la documentación exigida por el país de destino.",
+  "faq": [
+    { "pregunta": "¿El vuelo sale de Asunción?", "respuesta": "Sí, todas nuestras salidas son desde el Aeropuerto Internacional Silvio Pettirossi. Si viajás desde el interior, te ayudamos a coordinar la conexión." },
+    { "pregunta": "¿Puedo agregar noches?", "respuesta": "Sí. El paquete es de salida flexible, así que podemos armarlo con las noches que quieras y ajustamos el precio." },
+    { "pregunta": "¿Se puede pagar en cuotas?", "respuesta": "Sí, trabajamos con las principales tarjetas y podemos armarte un plan de pagos. Escribinos y te pasamos las opciones." }
+  ],
+  "tags": ["brasil", "playa", "copacabana", "cristo redentor", "verano", "escapada"],
+  "destacado": true,
+  "esEjemplo": true
+}

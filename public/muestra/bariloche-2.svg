@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img">
+  <defs>
+    <linearGradient id="cielobariloche2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f2e6d4"/>
+      <stop offset="55%" stop-color="#46937c"/>
+      <stop offset="100%" stop-color="#0f3d33"/>
+    </linearGradient>
+    <linearGradient id="tierrabariloche2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f3d33"/>
+      <stop offset="100%" stop-color="#0f3d33" stop-opacity="0.82"/>
+    </linearGradient>
+    <radialGradient id="solbariloche2">
+      <stop offset="0%" stop-color="#d8bc94" stop-opacity="0.95"/>
+      <stop offset="70%" stop-color="#d8bc94" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#d8bc94" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#cielobariloche2)"/>
+  <circle cx="714" cy="346" r="260" fill="url(#solbariloche2)"/>
+  <circle cx="714" cy="346" r="58" fill="#d8bc94" opacity="0.9"/>
+  <path d="M0,900 L0,620 L149.08442178973928,498.01608067937195 L298.16884357947856,750.1454578433186 L479.93772488553077,568.980975211598 L661.706606191583,704.4860363937914 L814.5897388202138,429.0945574454963 L967.4728714488447,760.0865962263197 L1155.3220349410549,541.3124496815726 L1343.171198433265,772.5824061781168 L1541.965348070953,534.0707374271005 L1740.759497708641,702.8483868855983 L1600,900 Z" fill="url(#tierrabariloche2)"/>
+  <rect y="820" width="1600" height="80" fill="#0f3d33" opacity="0.35"/>
+</svg>

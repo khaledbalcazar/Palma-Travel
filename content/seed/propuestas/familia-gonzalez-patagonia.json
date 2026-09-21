@@ -1,0 +1,81 @@
+{
+  "slug": "familia-gonzalez-patagonia",
+  "clienteNombre": "Familia González",
+  "validaHasta": "2026-10-31",
+  "notasInternas": "Ejemplo de propuesta personalizada. Contacto: Marcela, la mamá. Son 4: dos adultos y dos adolescentes de 14 y 17. Presupuesto que manejaron: hasta 6.500 dólares en total. Prefieren no manejar y piden que todo esté cerrado de antemano. Ya viajaron con nosotros a Río en 2025. Ojo: el papá tiene problemas de rodilla, evitar trekkings largos, por eso se sacó el Laguna de los Tres y se puso el Chorrillo del Salto. Tarifa aérea cotizada el 12/09, revalidar antes de confirmar.",
+  "titulo": "El Calafate y El Chaltén: glaciares y montaña para la Familia González",
+  "destino": "El Calafate y El Chaltén",
+  "pais": "Argentina",
+  "region": "sudamerica",
+  "tipoViaje": ["naturaleza", "aventura", "relax"],
+  "idealPara": ["familia"],
+  "ritmo": "moderado",
+  "duracionDias": 8,
+  "duracionNoches": 7,
+  "fechasSalida": ["2026-12-27"],
+  "salidaGrupal": false,
+  "coordinadores": [],
+  "precioDesde": 1620,
+  "moneda": "USD",
+  "basePrecio": "por persona, en dos habitaciones dobles (4 pasajeros)",
+  "vigenciaPrecio": "2026-10-31",
+  "incluyeVuelo": true,
+  "incluye": [
+    "Pasajes aéreos para 4 pasajeros: Asunción – El Calafate – Asunción vía Buenos Aires, con equipaje de 23 kg cada uno",
+    "4 noches en El Calafate y 3 noches en El Chaltén, en dos habitaciones dobles con desayuno",
+    "Todos los traslados: aeropuerto, hoteles y el tramo El Calafate – El Chaltén ida y vuelta",
+    "Excursión al Glaciar Perito Moreno con pasarelas y entrada al Parque Nacional Los Glaciares",
+    "Navegación Todo Glaciares por el Lago Argentino (Upsala y Spegazzini)",
+    "Caminata guiada al Mirador de los Cóndores y al Chorrillo del Salto en El Chaltén",
+    "Asistencia al viajero para los 4 pasajeros",
+    "Impuestos aéreos y tasas de embarque"
+  ],
+  "noIncluye": [
+    "Almuerzos y cenas",
+    "Minitrekking sobre el glaciar (lo dejamos afuera a pedido de ustedes)",
+    "Excursiones no mencionadas",
+    "Gastos personales"
+  ],
+  "itinerario": [
+    { "dia": 1, "titulo": "Asunción – El Calafate", "descripcion": "Salida de Asunción con conexión en Buenos Aires. Llegada a El Calafate a media tarde, traslado al hotel y caminata tranquila por la avenida principal para conocer el pueblo." },
+    { "dia": 2, "titulo": "Glaciar Perito Moreno", "descripcion": "Día completo en el Parque Nacional Los Glaciares. Recorrido por las pasarelas frente al Perito Moreno, con distintos miradores y varias horas para escuchar los desprendimientos de hielo. Las pasarelas tienen tramos con ascensor y opciones sin escaleras." },
+    { "dia": 3, "titulo": "Navegación Todo Glaciares", "descripcion": "Navegación de día completo por el Lago Argentino hasta los glaciares Upsala y Spegazzini, entre témpanos. Es un día de barco, sin caminatas." },
+    { "dia": 4, "titulo": "El Calafate libre", "descripcion": "Día libre. Sugerencias: la Reserva Laguna Nimez para ver flamencos, el Glaciarium o simplemente descansar antes de subir a El Chaltén." },
+    { "dia": 5, "titulo": "El Calafate – El Chaltén", "descripcion": "Traslado de unas 3 horas hasta El Chaltén, la capital nacional del trekking, con el Fitz Roy de fondo. Check in y tarde libre en el pueblo." },
+    { "dia": 6, "titulo": "Mirador de los Cóndores", "descripcion": "Caminata guiada corta, de una hora de subida suave, al Mirador de los Cóndores y de las Águilas, con vista a todo el valle del río de las Vueltas. Tarde libre." },
+    { "dia": 7, "titulo": "Chorrillo del Salto", "descripcion": "Caminata tranquila y casi sin desnivel hasta la cascada Chorrillo del Salto, entre bosque de lengas. A la tarde, regreso a El Calafate." },
+    { "dia": 8, "titulo": "El Calafate – Asunción", "descripcion": "Traslado al aeropuerto de El Calafate y regreso a Asunción vía Buenos Aires." }
+  ],
+  "alojamiento": [
+    { "nombre": "Hotel Kau Yatun", "categoria": "4 estrellas", "noches": 4, "ciudad": "El Calafate" },
+    { "nombre": "Hostería Senderos", "categoria": "3 estrellas superior", "noches": 3, "ciudad": "El Chaltén" }
+  ],
+  "highlights": [
+    "El Perito Moreno con un día entero, sin apuro",
+    "Navegación a Upsala y Spegazzini, un día completo sin caminar",
+    "Dos caminatas cortas y suaves en El Chaltén, elegidas para que todos las puedan hacer",
+    "Dos habitaciones dobles reservadas, todo cerrado de antemano",
+    "Salida el 27 de diciembre, para pasar Año Nuevo en la Patagonia"
+  ],
+  "imagenPortada": { "src": "/muestra/patagonia-portada.svg", "alt": "Ilustración de picos de montaña afilados bajo un cielo claro" },
+  "galeria": [
+    { "src": "/muestra/patagonia-1.svg", "alt": "Ilustración de una cadena de montañas con un valle al pie" },
+    { "src": "/muestra/patagonia-2.svg", "alt": "Ilustración de bosque bajo con siluetas de árboles" },
+    { "src": "/muestra/patagonia-3.svg", "alt": "Ilustración de cumbres nevadas contra un cielo gris claro" }
+  ],
+  "documentacion": [
+    { "titulo": "Documento de identidad", "detalle": "Cédula de identidad paraguaya vigente para los cuatro, o pasaporte. Los chicos de 14 y 17 viajan con ustedes, así que no necesitan autorización adicional." },
+    { "titulo": "Visa", "detalle": "No se necesita visa para ciudadanos paraguayos." },
+    { "titulo": "Vacunas", "detalle": "No se exigen vacunas." },
+    { "titulo": "Qué llevar", "detalle": "Aunque sea verano, en la Patagonia hace frío y viento fuerte. Campera rompeviento, abrigo en capas, calzado cerrado con buena suela y protector solar alto." }
+  ],
+  "basesYCondiciones": "Esta propuesta fue armada especialmente para la Familia González y los precios son válidos hasta el 31 de octubre de 2026. Precios expresados en dólares americanos por persona, calculados sobre la base de 4 pasajeros en dos habitaciones dobles; si cambia la cantidad de pasajeros, el precio se recalcula. Sujeto a disponibilidad y a confirmación al momento de la reserva. Las tarifas aéreas pueden variar hasta la emisión de los pasajes. La reserva se confirma con una seña del 30% y el saldo debe abonarse 30 días antes de la salida. Cancelaciones con más de 45 días de anticipación: se retiene el 15%. Entre 45 y 21 días: se retiene el 50%. Con menos de 21 días o no presentación: sin reintegro. Las excursiones en la Patagonia dependen de las condiciones climáticas y del estado de los caminos y del lago; si una navegación o caminata se suspende por clima, se reprograma dentro de la estadía o se reintegra su valor. Los servicios no utilizados no son reembolsables. Palma Travel actúa como intermediario entre el pasajero y los prestadores de servicios, por lo que no se responsabiliza por hechos ajenos a su control.",
+  "faq": [
+    { "pregunta": "¿Se puede agregar el minitrekking sobre el glaciar?", "respuesta": "Sí, lo dejamos afuera porque implica caminar unas dos horas sobre hielo con grampones. Si alguno del grupo quiere hacerlo por su cuenta ese día, lo cotizamos aparte." },
+    { "pregunta": "¿Qué pasa si el clima arruina una excursión?", "respuesta": "En la Patagonia pasa. Si se suspende por clima, la reprogramamos dentro de los días que están ahí o les devolvemos lo que costó esa excursión." },
+    { "pregunta": "¿Conviene cambiar plata allá?", "respuesta": "Llevá dólares en efectivo y cambiá en El Calafate, que tiene mejor cotización que el aeropuerto. Las tarjetas se aceptan en casi todos lados." },
+    { "pregunta": "¿Podemos pagar en cuotas?", "respuesta": "Sí. Con la seña del 30% ya queda todo reservado y el resto lo podemos dividir hasta 30 días antes de la salida. Charlamos las opciones por WhatsApp." }
+  ],
+  "tags": ["patagonia", "el calafate", "el chalten", "glaciares", "familia", "propuesta", "a medida"],
+  "esEjemplo": true
+}

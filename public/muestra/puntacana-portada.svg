@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img">
+  <defs>
+    <linearGradient id="cielopuntacanaportada" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fdf6e8"/>
+      <stop offset="55%" stop-color="#2dd4bf"/>
+      <stop offset="100%" stop-color="#0c6b7a"/>
+    </linearGradient>
+    <linearGradient id="tierrapuntacanaportada" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0c6b7a"/>
+      <stop offset="100%" stop-color="#0c6b7a" stop-opacity="0.82"/>
+    </linearGradient>
+    <radialGradient id="solpuntacanaportada">
+      <stop offset="0%" stop-color="#f5a28c" stop-opacity="0.95"/>
+      <stop offset="70%" stop-color="#f5a28c" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#f5a28c" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#cielopuntacanaportada)"/>
+  <circle cx="1208" cy="193" r="260" fill="url(#solpuntacanaportada)"/>
+  <circle cx="1208" cy="193" r="58" fill="#f5a28c" opacity="0.9"/>
+  <path d="M0,900 L0,700 Q400,672.166315112263 800,700 T1600,690 L1600,900 Z" fill="url(#tierrapuntacanaportada)"/>
+  <rect y="820" width="1600" height="80" fill="#0c6b7a" opacity="0.35"/>
+</svg>

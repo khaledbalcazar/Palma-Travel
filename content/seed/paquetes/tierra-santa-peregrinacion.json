@@ -1,0 +1,85 @@
+{
+  "slug": "tierra-santa-peregrinacion",
+  "titulo": "Peregrinación a Tierra Santa con acompañamiento espiritual",
+  "destino": "Jerusalén, Belén, Nazaret y Galilea",
+  "pais": "Israel",
+  "region": "otros",
+  "estado": "agotado",
+  "tipoViaje": ["religioso", "cultura"],
+  "idealPara": ["adultos-mayores", "grupo", "solo", "pareja"],
+  "ritmo": "moderado",
+  "duracionDias": 11,
+  "duracionNoches": 10,
+  "fechasSalida": ["2027-03-06"],
+  "salidaGrupal": true,
+  "coordinadores": ["Padre Ignacio Duarte", "Marta Giménez"],
+  "precioDesde": 3990,
+  "moneda": "USD",
+  "basePrecio": "por persona en base doble",
+  "vigenciaPrecio": "2026-11-15",
+  "incluyeVuelo": true,
+  "incluye": [
+    "Pasaje aéreo Asunción – Tel Aviv – Asunción con conexiones y equipaje de 23 kg",
+    "10 noches en hoteles 4 estrellas en Jerusalén, Belén y Galilea, con media pensión (desayuno y cena)",
+    "Todos los traslados y recorridos en bus con aire acondicionado",
+    "Guía local especializado en Tierra Santa, en español",
+    "Acompañamiento espiritual: misa diaria en los santuarios del itinerario",
+    "Entradas a todos los sitios del programa",
+    "Renovación de las promesas matrimoniales en Caná para los matrimonios del grupo",
+    "Asistencia al viajero y propinas a guía y chofer",
+    "Impuestos aéreos y tasas de embarque"
+  ],
+  "noIncluye": [
+    "Almuerzos",
+    "Bebidas en las cenas",
+    "Gastos personales y ofrendas"
+  ],
+  "itinerario": [
+    { "dia": 1, "titulo": "Asunción – Tel Aviv", "descripcion": "Encuentro en el aeropuerto de Asunción con el Padre Ignacio y la coordinadora. Bendición de salida y comienzo del viaje. Noche a bordo." },
+    { "dia": 2, "titulo": "Llegada y traslado a Galilea", "descripcion": "Llegada a Tel Aviv, recepción y traslado hacia Galilea bordeando la costa mediterránea. Check in y cena. Primera oración del grupo a orillas del lago." },
+    { "dia": 3, "titulo": "Nazaret y Caná", "descripcion": "Basílica de la Anunciación en Nazaret e iglesia de San José. Por la tarde, Caná de Galilea, con la renovación de las promesas matrimoniales. Misa." },
+    { "dia": 4, "titulo": "Mar de Galilea", "descripcion": "Navegación por el lago de Tiberíades, Cafarnaúm, el Monte de las Bienaventuranzas y Tabgha, lugar de la multiplicación de los panes y los peces. Misa en las Bienaventuranzas." },
+    { "dia": 5, "titulo": "Monte Tabor y Jordán", "descripcion": "Subida al Monte Tabor, lugar de la Transfiguración. Renovación de las promesas bautismales en el río Jordán. Traslado a Belén." },
+    { "dia": 6, "titulo": "Belén", "descripcion": "Basílica de la Natividad, la gruta donde nació Jesús, y el Campo de los Pastores. Tarde para visitar los talleres de artesanos locales. Misa en Belén." },
+    { "dia": 7, "titulo": "Jerusalén: Monte de los Olivos", "descripcion": "Monte de los Olivos, Getsemaní, la Basílica de la Agonía y la iglesia del Pater Noster. Vista completa de la ciudad vieja desde el Dominus Flevit." },
+    { "dia": 8, "titulo": "Vía Dolorosa y Santo Sepulcro", "descripcion": "Recorrido de las catorce estaciones de la Vía Dolorosa por la ciudad vieja hasta el Santo Sepulcro. Muro de los Lamentos. Misa en el Santo Sepulcro." },
+    { "dia": 9, "titulo": "Ein Karem y Monte Sion", "descripcion": "Ein Karem, lugar de la Visitación y del nacimiento de Juan el Bautista. Monte Sion, Cenáculo y Dormición de la Virgen." },
+    { "dia": 10, "titulo": "Mar Muerto y Jericó", "descripcion": "Bajada al Mar Muerto, con tiempo para flotar en sus aguas. Jericó, la ciudad más antigua del mundo, y el Monte de las Tentaciones. Regreso a Jerusalén y cena de despedida." },
+    { "dia": 11, "titulo": "Tel Aviv – Asunción", "descripcion": "Traslado al aeropuerto de Tel Aviv y regreso a Asunción." }
+  ],
+  "alojamiento": [
+    { "nombre": "Hotel Restal", "categoria": "4 estrellas", "noches": 3, "ciudad": "Tiberíades (Galilea)" },
+    { "nombre": "Hotel Bethlehem Star", "categoria": "4 estrellas", "noches": 2, "ciudad": "Belén" },
+    { "nombre": "Hotel Grand Court", "categoria": "4 estrellas", "noches": 5, "ciudad": "Jerusalén" }
+  ],
+  "highlights": [
+    "Misa diaria en los santuarios, con acompañamiento sacerdotal paraguayo",
+    "Renovación de las promesas matrimoniales en Caná de Galilea",
+    "La Vía Dolorosa completa, a pie, hasta el Santo Sepulcro",
+    "Media pensión incluida: desayuno y cena todos los días",
+    "Grupo reducido, con coordinadora dedicada al cuidado de los peregrinos"
+  ],
+  "imagenPortada": { "src": "/muestra/tierrasanta-portada.svg", "alt": "Ilustración de un templo de piedra con frontón triangular bajo un cielo dorado" },
+  "galeria": [
+    { "src": "/muestra/tierrasanta-1.svg", "alt": "Ilustración de una construcción religiosa antigua al amanecer" },
+    { "src": "/muestra/tierrasanta-2.svg", "alt": "Ilustración de una ciudad amurallada de casas bajas" },
+    { "src": "/muestra/tierrasanta-3.svg", "alt": "Ilustración de una orilla tranquila con vegetación baja" }
+  ],
+  "documentacion": [
+    { "titulo": "Pasaporte", "detalle": "Obligatorio, con validez mínima de 6 meses desde la fecha de regreso." },
+    { "titulo": "Visa", "detalle": "Los ciudadanos paraguayos no necesitan visa para turismo en Israel. El ingreso se registra electrónicamente." },
+    { "titulo": "Autorización de entrada", "detalle": "Israel puede requerir una autorización electrónica de viaje previa. Nosotros la gestionamos para todo el grupo." },
+    { "titulo": "Vacunas", "detalle": "No se exigen vacunas." },
+    { "titulo": "Recomendación", "detalle": "Para entrar a los santuarios se pide ropa que cubra hombros y rodillas. Llevá un pañuelo o chal liviano." }
+  ],
+  "basesYCondiciones": "Precios expresados en dólares americanos por persona en base doble, sujetos a disponibilidad y a confirmación al momento de la reserva. Esta salida está AGOTADA: se cerró el cupo de la peregrinación de marzo de 2027. Si te interesa, escribinos y te anotamos en la lista de espera y te avisamos de la próxima fecha. La salida grupal requiere un mínimo de 20 peregrinos. Las tarifas aéreas pueden variar hasta la emisión de los pasajes. La reserva se confirma con una seña de 1.000 dólares por persona y el saldo debe abonarse 60 días antes de la salida. Cancelaciones con más de 90 días de anticipación: se retiene la seña. Entre 90 y 45 días: se retiene el 60%. Con menos de 45 días o no presentación: sin reintegro. El itinerario puede modificarse por razones de seguridad, operativas o litúrgicas, manteniendo el contenido del programa. Los servicios no utilizados no son reembolsables. Palma Travel actúa como intermediario entre el pasajero y los prestadores de servicios, por lo que no se responsabiliza por hechos ajenos a su control. Es responsabilidad del pasajero contar con la documentación exigida por el país de destino.",
+  "faq": [
+    { "pregunta": "¿Hay que ser muy católico practicante?", "respuesta": "No hace falta. Es una peregrinación con misa diaria y acompañamiento espiritual, pero recibimos a todo el que quiera conocer los lugares con respeto. Las misas son opcionales." },
+    { "pregunta": "¿Cuánto se camina?", "respuesta": "El ritmo es moderado. Los días más exigentes son el de la Vía Dolorosa y el del Monte Tabor, con escaleras y empedrado. La mayor parte del grupo son adultos mayores y el recorrido está pensado para eso." },
+    { "pregunta": "¿Por qué está agotado?", "respuesta": "El cupo de la salida de marzo de 2027 ya se completó. Escribinos por WhatsApp y te anotamos en la lista de espera para esa fecha o para la próxima peregrinación." },
+    { "pregunta": "¿Es seguro viajar a Tierra Santa?", "respuesta": "Seguimos permanentemente las recomendaciones oficiales y las de nuestro operador local. Si la situación lo desaconseja, reprogramamos la salida o devolvemos lo abonado, como dice en las bases y condiciones." }
+  ],
+  "tags": ["peregrinacion", "religioso", "tierra santa", "jerusalen", "belen", "grupal", "coordinador", "israel"],
+  "destacado": false,
+  "esEjemplo": true
+}

@@ -1,0 +1,70 @@
+{
+  "slug": "misiones-jesuiticas-encarnacion",
+  "titulo": "Misiones jesuíticas y Encarnación: Paraguay de fin de semana",
+  "destino": "Encarnación, Trinidad y Jesús",
+  "pais": "Paraguay",
+  "region": "paraguay",
+  "estado": "activo",
+  "tipoViaje": ["cultura", "naturaleza", "gastronomia"],
+  "idealPara": ["familia", "pareja", "amigos", "adultos-mayores"],
+  "ritmo": "tranquilo",
+  "duracionDias": 3,
+  "duracionNoches": 2,
+  "fechasSalida": "flexible",
+  "salidaGrupal": false,
+  "coordinadores": [],
+  "precioDesde": 210,
+  "moneda": "USD",
+  "basePrecio": "por persona en base doble",
+  "vigenciaPrecio": "2026-12-31",
+  "incluyeVuelo": false,
+  "incluye": [
+    "Transporte terrestre ida y vuelta desde Asunción en bus ejecutivo",
+    "2 noches de alojamiento en Encarnación con desayuno",
+    "Visita guiada a las ruinas de Trinidad y Jesús de Tavarangüé, con entradas incluidas",
+    "Espectáculo de luz y sonido en Trinidad",
+    "Tarde en la playa San José sobre el río Paraná",
+    "Guía acompañante durante todo el recorrido"
+  ],
+  "noIncluye": [
+    "Pasaje aéreo: este paquete es 100% terrestre, la salida es en bus desde Asunción",
+    "Almuerzos y cenas",
+    "Excursión a la Ruta de la Yerba Mate y a Bella Vista (opcional)",
+    "Gastos personales"
+  ],
+  "itinerario": [
+    { "dia": 1, "titulo": "Asunción – Encarnación", "descripcion": "Salida temprano desde Asunción en bus ejecutivo. Aproximadamente 5 horas de viaje por la Ruta 1, con parada intermedia. Llegada a Encarnación, check in y tarde libre en la costanera, con su playa urbana y sus food trucks." },
+    { "dia": 2, "titulo": "Trinidad y Jesús de Tavarangüé", "descripcion": "Día completo en las dos misiones jesuíticas declaradas Patrimonio de la Humanidad por la Unesco. Visita guiada a Trinidad por la mañana y a Jesús de Tavarangüé por la tarde. A la noche, el espectáculo de luz y sonido sobre las ruinas de Trinidad, que se ve de noche y es la postal del viaje." },
+    { "dia": 3, "titulo": "Playa San José y regreso", "descripcion": "Mañana en la playa San José, sobre el río Paraná. Almuerzo libre en la costanera y a la tarde salida de regreso a Asunción." }
+  ],
+  "alojamiento": [
+    { "nombre": "Hotel de la Costa", "categoria": "3 estrellas", "noches": 2, "ciudad": "Encarnación" }
+  ],
+  "highlights": [
+    "Dos sitios Patrimonio de la Humanidad de la Unesco en un fin de semana",
+    "El espectáculo de luz y sonido de Trinidad, de noche, incluido",
+    "Sin trámites ni pasaporte: todo dentro de Paraguay",
+    "Ideal para escaparse tres días sin pedir muchos días de vacaciones"
+  ],
+  "imagenPortada": { "src": "/muestra/misiones-portada.svg", "alt": "Ilustración de una construcción antigua de piedra con frontón, recortada contra un cielo cálido" },
+  "galeria": [
+    { "src": "/muestra/misiones-1.svg", "alt": "Ilustración de vegetación densa y copas de árboles al atardecer" },
+    { "src": "/muestra/misiones-2.svg", "alt": "Ilustración de ruinas de piedra bajo el sol" },
+    { "src": "/muestra/misiones-3.svg", "alt": "Ilustración de una costa de río con vegetación baja" }
+  ],
+  "documentacion": [
+    { "titulo": "Documento de identidad", "detalle": "Cédula de identidad paraguaya vigente. Es un viaje dentro del país, no se necesita pasaporte." },
+    { "titulo": "Si querés cruzar a Posadas", "detalle": "Encarnación está unida a Posadas (Argentina) por el puente San Roque González. Si querés cruzar en tu tiempo libre, necesitás la cédula vigente. No está incluido en el programa." },
+    { "titulo": "Vacunas", "detalle": "No se exigen vacunas. Llevá repelente y protector solar." }
+  ],
+  "basesYCondiciones": "Precios expresados en dólares americanos por persona en base doble, sujetos a disponibilidad y a confirmación al momento de la reserva. También se puede abonar en guaraníes al tipo de cambio del día. Este paquete NO incluye pasaje aéreo: el traslado desde Asunción es terrestre, en bus ejecutivo. La salida es flexible y se coordina según la fecha que elija el pasajero, con un mínimo de 2 pasajeros. El espectáculo de luz y sonido de Trinidad depende de las condiciones climáticas y de la programación del sitio; si se suspende, se reprograma dentro de la estadía o se reintegra el valor de la entrada. Cancelaciones con más de 15 días de anticipación: sin gastos. Entre 15 y 7 días: se retiene el 30%. Con menos de 7 días o no presentación: se retiene el 100%. Los servicios no utilizados no son reembolsables. Palma Travel actúa como intermediario entre el pasajero y los prestadores de servicios, por lo que no se responsabiliza por hechos ajenos a su control.",
+  "faq": [
+    { "pregunta": "¿Este paquete incluye vuelo?", "respuesta": "No. Es un viaje terrestre: salimos de Asunción en bus ejecutivo y son unas 5 horas hasta Encarnación. Está pensado así para que sea accesible." },
+    { "pregunta": "¿Puedo ir en mi propio auto?", "respuesta": "Sí. Si preferís manejar, te descontamos el transporte del precio y te armamos el paquete solo con el hotel y las visitas guiadas." },
+    { "pregunta": "¿Se puede hacer en Carnaval?", "respuesta": "Sí, y es la época más linda, pero también la más demandada: el Carnaval Encarnaceno llena la ciudad. Hay que reservar con varios meses de anticipación y las tarifas son más altas." },
+    { "pregunta": "¿Es apto para adultos mayores?", "respuesta": "Sí. El ritmo es tranquilo, aunque las ruinas tienen superficies irregulares y algo de sol. Recomendamos calzado cómodo, gorro y agua." }
+  ],
+  "tags": ["paraguay", "encarnacion", "trinidad", "jesuitas", "unesco", "sin vuelo", "fin de semana", "economico"],
+  "destacado": true,
+  "esEjemplo": true
+}

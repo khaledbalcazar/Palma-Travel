@@ -1,0 +1,78 @@
+{
+  "slug": "bariloche-nieve-familia",
+  "titulo": "Bariloche con nieve: Cerro Catedral y Circuito Chico",
+  "destino": "San Carlos de Bariloche",
+  "pais": "Argentina",
+  "region": "sudamerica",
+  "estado": "proximamente",
+  "tipoViaje": ["nieve", "naturaleza", "aventura"],
+  "idealPara": ["familia", "amigos", "pareja"],
+  "ritmo": "moderado",
+  "duracionDias": 7,
+  "duracionNoches": 6,
+  "fechasSalida": ["2027-07-10", "2027-07-17", "2027-07-24"],
+  "salidaGrupal": false,
+  "coordinadores": [],
+  "precioDesde": 1290,
+  "moneda": "USD",
+  "basePrecio": "por persona en base doble",
+  "vigenciaPrecio": "2027-04-30",
+  "incluyeVuelo": true,
+  "incluye": [
+    "Pasaje aéreo Asunción – Bariloche – Asunción vía Buenos Aires, con equipaje de 23 kg",
+    "6 noches de alojamiento en el centro de Bariloche con desayuno",
+    "Traslados aeropuerto – hotel – aeropuerto",
+    "Excursión de día completo al Circuito Chico con guía",
+    "Traslado ida y vuelta al Cerro Catedral en dos jornadas",
+    "Asistencia al viajero con cobertura de deportes de nieve",
+    "Impuestos aéreos y tasas de embarque"
+  ],
+  "noIncluye": [
+    "Pase de esquí y alquiler de equipo en el Cerro Catedral",
+    "Clases de esquí o snowboard",
+    "Almuerzos y cenas",
+    "Excursión al Cerro Tronador y a Villa La Angostura (opcionales)",
+    "Gastos personales"
+  ],
+  "itinerario": [
+    { "dia": 1, "titulo": "Asunción – Bariloche", "descripcion": "Salida desde Asunción con conexión en Buenos Aires. Llegada a Bariloche, traslado al hotel y resto del día libre para caminar por el Centro Cívico y comprar chocolate." },
+    { "dia": 2, "titulo": "Circuito Chico", "descripcion": "Excursión de día completo bordeando el lago Nahuel Huapi: Playa Bonita, isla Huemul, Punto Panorámico, Bahía López y el hotel Llao Llao. Subida opcional al Cerro Campanario." },
+    { "dia": 3, "titulo": "Cerro Catedral", "descripcion": "Traslado al centro de esquí más grande de Sudamérica. Día completo en la nieve: pistas para todos los niveles, escuela de esquí y snowboard, y trineos para los más chicos." },
+    { "dia": 4, "titulo": "Día libre", "descripcion": "Día libre en Bariloche. Buen momento para la excursión opcional a Villa La Angostura y el Bosque de Arrayanes, o para una tarde de cervecería artesanal." },
+    { "dia": 5, "titulo": "Segunda jornada en Cerro Catedral", "descripcion": "Otra vez a la nieve, ya con el cerro conocido. Almuerzo en alguno de los refugios de altura, con vista a todo el valle." },
+    { "dia": 6, "titulo": "Día libre / Cerro Tronador (opcional)", "descripcion": "Día libre. Recomendamos la excursión opcional al Cerro Tronador y el Ventisquero Negro, un día entero de montaña y glaciar." },
+    { "dia": 7, "titulo": "Bariloche – Asunción", "descripcion": "Desayuno, tiempo libre según el horario del vuelo y traslado al aeropuerto para el regreso." }
+  ],
+  "alojamiento": [
+    { "nombre": "Hotel Nevada", "categoria": "4 estrellas", "noches": 6, "ciudad": "San Carlos de Bariloche" }
+  ],
+  "highlights": [
+    "Dos jornadas completas en el Cerro Catedral incluidas",
+    "Hotel en pleno centro, a pasos del Centro Cívico y las chocolaterías",
+    "Circuito Chico con guía, la excursión clásica de Bariloche",
+    "Pensado para que los chicos conozcan la nieve",
+    "Asistencia al viajero con cobertura de deportes de nieve incluida"
+  ],
+  "imagenPortada": { "src": "/muestra/bariloche-portada.svg", "alt": "Ilustración de picos nevados recortados contra un cielo gris claro" },
+  "galeria": [
+    { "src": "/muestra/bariloche-1.svg", "alt": "Ilustración de una cadena montañosa cubierta de nieve" },
+    { "src": "/muestra/bariloche-2.svg", "alt": "Ilustración de montañas verdes con un lago al pie" },
+    { "src": "/muestra/bariloche-3.svg", "alt": "Ilustración de un valle de montaña bajo el sol" }
+  ],
+  "documentacion": [
+    { "titulo": "Documento de identidad", "detalle": "Los paraguayos pueden entrar a Argentina con la cédula de identidad vigente o con el pasaporte." },
+    { "titulo": "Menores de edad", "detalle": "Los menores que viajan sin ambos padres necesitan autorización de viaje. Te explicamos cómo tramitarla." },
+    { "titulo": "Visa", "detalle": "No se necesita visa para ciudadanos paraguayos." },
+    { "titulo": "Vacunas", "detalle": "No se exigen vacunas." }
+  ],
+  "basesYCondiciones": "Precios expresados en dólares americanos por persona en base doble, sujetos a disponibilidad y a confirmación al momento de la reserva. La temporada de nieve depende de las condiciones climáticas: Palma Travel no garantiza la apertura de pistas ni la cantidad de nieve del Cerro Catedral, ya que dependen del centro de esquí. El pase de esquí y el alquiler de equipo no están incluidos y se abonan en destino. Las tarifas aéreas pueden variar hasta la emisión de los pasajes. La reserva se confirma con una seña del 30% y el saldo debe abonarse 30 días antes de la salida. Cancelaciones con más de 45 días de anticipación: se retiene el 15%. Entre 45 y 21 días: se retiene el 50%. Con menos de 21 días o no presentación: sin reintegro. Los servicios no utilizados no son reembolsables. Palma Travel actúa como intermediario entre el pasajero y los prestadores de servicios, por lo que no se responsabiliza por hechos ajenos a su control. Es responsabilidad del pasajero contar con la documentación exigida por el país de destino.",
+  "faq": [
+    { "pregunta": "¿Cuánto sale el pase de esquí?", "respuesta": "Varía según la temporada y la cantidad de días. En julio, un pase diario de adulto ronda los 70 a 90 dólares y el alquiler de equipo completo entre 25 y 40 dólares por día. Te pasamos los valores actualizados al reservar." },
+    { "pregunta": "¿Sirve si nunca esquié?", "respuesta": "Sí. El Cerro Catedral tiene sector de principiantes y escuela con clases en español. Mucha gente del paquete esquía por primera vez." },
+    { "pregunta": "¿Qué ropa hay que llevar?", "respuesta": "Campera y pantalón impermeables, guantes, gorro, cuello y lentes de sol. Te mandamos una lista completa cuando confirmás. La ropa técnica también se puede alquilar en Bariloche." },
+    { "pregunta": "¿Por qué dice próximamente?", "respuesta": "Estamos cerrando las tarifas de la temporada de invierno. Dejanos tu contacto y te avisamos apenas abre la venta." }
+  ],
+  "tags": ["argentina", "nieve", "bariloche", "esqui", "invierno", "familia", "patagonia"],
+  "destacado": false,
+  "esEjemplo": true
+}
