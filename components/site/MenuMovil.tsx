@@ -36,7 +36,7 @@ export function MenuMovil({ whatsapp }: { whatsapp: string | null }) {
         onClick={() => setAbierto(true)}
         aria-label="Abrir el menú"
         aria-expanded={abierto}
-        className="inline-flex size-10 items-center justify-center rounded-full text-palma-900 transition-colors hover:bg-palma-900/6"
+        className="cabecera-menu inline-flex size-11 items-center justify-center rounded-full text-palma-900 transition-colors hover:bg-palma-900/6"
       >
         <Menu className="size-6" aria-hidden="true" />
       </button>

@@ -216,8 +216,8 @@ export function IncluyeNoIncluye({ viaje }: { viaje: Viaje }) {
           <p className="mt-4 flex gap-2.5 rounded-xl bg-coral-100 p-4 text-[0.95rem] font-medium text-coral-900">
             <Bus className="mt-0.5 size-5 shrink-0" aria-hidden="true" />
             <span>
-              Este viaje <strong>no incluye pasaje aéreo</strong>. El traslado
-              desde Asunción es por tierra.
+              Este viaje <strong>no incluye pasaje aéreo</strong>. Consultá
+              las opciones de traslado con el equipo.
             </span>
           </p>
         )}

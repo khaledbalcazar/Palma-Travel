@@ -53,7 +53,7 @@
     "Pensado para que los chicos conozcan la nieve",
     "Asistencia al viajero con cobertura de deportes de nieve incluida"
   ],
-  "imagenPortada": { "src": "/muestra/bariloche-portada.svg", "alt": "Ilustración de picos nevados recortados contra un cielo gris claro" },
+  "imagenPortada": {"src": "/images/bariloche.webp", "alt": "Montañas nevadas de San Carlos de Bariloche"},
   "galeria": [
     { "src": "/muestra/bariloche-1.svg", "alt": "Ilustración de una cadena montañosa cubierta de nieve" },
     { "src": "/muestra/bariloche-2.svg", "alt": "Ilustración de montañas verdes con un lago al pie" },

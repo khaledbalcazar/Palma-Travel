@@ -59,7 +59,7 @@
     "Media pensión incluida: desayuno y cena todos los días",
     "Grupo reducido, con coordinadora dedicada al cuidado de los peregrinos"
   ],
-  "imagenPortada": { "src": "/muestra/tierrasanta-portada.svg", "alt": "Ilustración de un templo de piedra con frontón triangular bajo un cielo dorado" },
+  "imagenPortada": {"src": "/images/tierrasanta.webp", "alt": "Cúpula de la Roca en Jerusalén, rodeada de árboles"},
   "galeria": [
     { "src": "/muestra/tierrasanta-1.svg", "alt": "Ilustración de una construcción religiosa antigua al amanecer" },
     { "src": "/muestra/tierrasanta-2.svg", "alt": "Ilustración de una ciudad amurallada de casas bajas" },

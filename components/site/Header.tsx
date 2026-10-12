@@ -6,20 +6,18 @@ import { Logo } from "@/components/site/Logo";
 import { estiloBoton } from "@/components/ui/Boton";
 import { MenuMovil } from "@/components/site/MenuMovil";
 import { IconoWhatsApp } from "@/components/ui/IconosRedes";
+import { MarcoHeader } from "@/components/site/MarcoHeader";
 
 export async function Header() {
   const config = await getConfig();
   const wa = linkWhatsApp(config, mensajeGeneral());
 
   return (
-    <header
-      data-sitio
-      className="sticky top-0 z-40 border-b border-palma-900/8 bg-arena-50/85 backdrop-blur-md"
-    >
+    <MarcoHeader>
       <div className="contenedor flex h-16 items-center justify-between gap-4 md:h-20">
         <Link
           href="/"
-          className="text-palma-900 transition-opacity hover:opacity-80"
+          className="cabecera-logo text-palma-900 transition-opacity hover:opacity-80"
           aria-label="Palma Travel, ir al inicio"
         >
           <Logo />
@@ -30,7 +28,7 @@ export async function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="rounded-full px-4 py-2 text-[0.95rem] font-medium text-tinta-700 transition-colors hover:bg-palma-900/6 hover:text-palma-900"
+              className="cabecera-enlace rounded-full px-4 py-2 text-base font-semibold text-tinta-700 transition-colors hover:bg-palma-900/6 hover:text-palma-900"
             >
               {item.etiqueta}
             </Link>
@@ -38,7 +36,7 @@ export async function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          {wa && (
+          {wa ? (
             <a
               href={wa}
               target="_blank"
@@ -48,16 +46,18 @@ export async function Header() {
               className={estiloBoton({
                 variante: "whatsapp",
                 tamano: "sm",
-                className: "hidden sm:inline-flex",
+                className: "cabecera-contacto hidden sm:inline-flex",
               })}
             >
               <IconoWhatsApp className="size-4" />
               Escribinos
             </a>
+          ) : (
+            <Link href="/contacto" className="cabecera-contacto hidden rounded-full border border-palma-900/20 px-5 py-2.5 text-sm font-semibold text-palma-900 sm:inline-flex">Hablemos de tu viaje</Link>
           )}
           <MenuMovil whatsapp={wa} />
         </div>
       </div>
-    </header>
+    </MarcoHeader>
   );
 }

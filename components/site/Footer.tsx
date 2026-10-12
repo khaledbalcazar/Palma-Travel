@@ -132,6 +132,9 @@ export async function Footer() {
           <p>
             © {anio} {SITIO.nombreLegal}. Todos los derechos reservados.
           </p>
+          <a href="/images/creditos.html" className="underline-offset-4 hover:underline hover:text-arena-50">
+            Créditos de fotografías
+          </a>
           {config.registroSenatur && (
             <p>Registro SENATUR n.º {config.registroSenatur}</p>
           )}

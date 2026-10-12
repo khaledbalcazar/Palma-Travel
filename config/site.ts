@@ -81,10 +81,9 @@ export const CONFIG_POR_DEFECTO: SiteConfig = {
   heroTitulo: SITIO.eslogan,
   heroSubtitulo:
     "Paquetes armados con tiempo y viajes hechos a tu gusto, siempre con salida desde Asunción y alguien del equipo atrás tuyo de principio a fin.",
-  /* Foto de muestra propia. Se reemplaza desde el panel, en
-     Configuración del sitio, por una foto real de la agencia o por una
-     dirección de Unsplash (ya está habilitado en next.config.ts). */
-  heroImagen: "/muestra/hero-home.svg",
+  /* Fotografía de portada alojada localmente; fuente en public/images/FUENTES.md.
+     Se puede reemplazar desde Configuración del sitio en el panel. */
+  heroImagen: "/images/costa-portada.webp",
 
   mostrarPrecioEnGuaranies: false,
   tipoCambioUsdGs: 7300,

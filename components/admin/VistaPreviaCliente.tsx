@@ -2,12 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { TriangleAlert } from "lucide-react";
+import { DetallePaquete } from "@/components/paquete/DetallePaquete";
 import { CuerpoViaje } from "@/components/paquete/CuerpoViaje";
-import {
-  linkWhatsApp,
-  mensajePaquete,
-  mensajePropuesta,
-} from "@/lib/whatsapp";
+import { linkWhatsApp, mensajePropuesta } from "@/lib/whatsapp";
 import {
   esPropuesta,
   paqueteSchema,
@@ -57,7 +54,10 @@ export function VistaPreviaCliente({ config }: { config: SiteConfig }) {
     return (
       <div className="contenedor max-w-xl py-20">
         <p className="flex items-start gap-3 rounded-xl bg-arena-200 px-5 py-4 text-[0.95rem] text-tinta-700">
-          <TriangleAlert className="mt-0.5 size-5 shrink-0 text-coral-600" aria-hidden="true" />
+          <TriangleAlert
+            className="mt-0.5 size-5 shrink-0 text-coral-600"
+            aria-hidden="true"
+          />
           {problema}
         </p>
       </div>
@@ -66,7 +66,9 @@ export function VistaPreviaCliente({ config }: { config: SiteConfig }) {
 
   if (!viaje) {
     return (
-      <div className="contenedor py-20 text-center text-tinta-500">Cargando…</div>
+      <div className="contenedor py-20 text-center text-tinta-500">
+        Cargando…
+      </div>
     );
   }
 
@@ -76,14 +78,15 @@ export function VistaPreviaCliente({ config }: { config: SiteConfig }) {
         Vista previa — así se va a ver «{viaje.titulo}». Todavía no está
         publicado.
       </p>
-      <CuerpoViaje
-        viaje={viaje}
-        config={config}
-        whatsapp={linkWhatsApp(
-          config,
-          esPropuesta(viaje) ? mensajePropuesta(viaje) : mensajePaquete(viaje),
-        )}
-      />
+      {esPropuesta(viaje) ? (
+        <CuerpoViaje
+          viaje={viaje}
+          config={config}
+          whatsapp={linkWhatsApp(config, mensajePropuesta(viaje))}
+        />
+      ) : (
+        <DetallePaquete paquete={viaje} config={config} />
+      )}
     </>
   );
 }

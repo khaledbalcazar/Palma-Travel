@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @import "../styles/tokens.css";
 @import "../styles/print.css";
+@import "../styles/catalogo.css";
+@import "../styles/detalle-paquete.css";
 
 @layer base {
   html {
@@ -84,4 +86,90 @@
 
   .scrollbar-oculta { scrollbar-width: none; }
   .scrollbar-oculta::-webkit-scrollbar { display: none; }
+}
+
+/* Portada editorial: fotografía enmarcada y búsqueda conectada al catálogo. */
+.cabecera-sitio { position: sticky; top: 0; z-index: 40; background: #fff; border-bottom: 1px solid #e3e7e6; }
+.cabecera-inicio { position: absolute; top: 32px; left: 32px; right: 32px; background: transparent; border: 0; }
+.cabecera-inicio .cabecera-logo, .cabecera-inicio .cabecera-enlace, .cabecera-inicio .cabecera-menu { color: #fff; }
+.cabecera-inicio .cabecera-enlace:hover { background: rgb(255 255 255 / .14); }
+.cabecera-inicio .cabecera-contacto { color: #fff; border: 1px solid rgb(255 255 255 / .55); background: transparent; box-shadow: none; }
+.cabecera-inicio .cabecera-contacto:hover { background: rgb(255 255 255 / .14); }
+.inicio-palma { background: #fff; padding-top: 20px; padding-bottom: 16px; }
+.portada-palma { position: relative; isolation: isolate; margin: 0 20px; min-height: 680px; border-radius: 32px; overflow: hidden; background: #0f3d33; color: #fff; display: flex; align-items: center; }
+.portada-velo { position: absolute; inset: 0; background: linear-gradient(180deg, rgb(5 28 24 / .66), rgb(5 28 24 / .18) 35%, rgb(5 28 24 / .55) 100%); }
+.portada-contenido { position: relative; width: 100%; max-width: 1140px; margin: auto; padding: 142px 32px 110px; }
+.portada-antetitulo { display: flex; align-items: center; gap: 10px; font-size: 11px; font-weight: 700; letter-spacing: .19em; }
+.portada-antetitulo > span { height: 7px; width: 7px; border-radius: 50%; background: #d3e9e1; }
+.portada-contenido h1 { max-width: 800px; margin-top: 20px; color: white; font-family: var(--font-sans); font-size: clamp(2.6rem, 5vw, 4.5rem); font-weight: 700; line-height: 1.1; letter-spacing: -.055em; }
+.portada-descripcion { max-width: 580px; margin-top: 22px; font-size: 16px; line-height: 1.75; color: #fff; }
+.buscador-viajes { display: grid; grid-template-columns: 1.15fr 1fr 1.15fr auto; align-items: center; padding: 10px; margin-top: 36px; border-radius: 999px; background: white; color: var(--color-tinta-900); }
+.buscador-campo { display: flex; align-items: center; gap: 12px; padding: 8px 18px; min-width: 0; }
+.buscador-campo + .buscador-campo { border-left: 1px solid #e3e7e6; }
+.buscador-campo > svg { width: 19px; height: 19px; color: var(--color-palma-600); flex-shrink: 0; }
+.buscador-campo > span { min-width: 0; width: 100%; }
+.buscador-etiqueta { display: block; font-size: 11px; line-height: 1.5; font-weight: 700; margin-bottom: 4px; }
+.buscador-campo select { display: block; width: 100%; min-height: 28px; font-size: 13px; color: var(--color-tinta-500); cursor: pointer; background: white; padding-right: 5px; }
+.buscador-boton { display: flex; align-items: center; justify-content: center; gap: 9px; background: var(--color-palma-800); border-radius: 999px; color: white; min-height: 60px; padding: 0 22px; font-size: 13px; font-weight: 600; cursor: pointer; transition: background .2s; }
+.buscador-boton:hover { background: var(--color-palma-600); }
+.portada-ayuda { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin: 18px 12px 0; font-size: 12px; }
+.portada-ayuda > span, .portada-ayuda a { display: inline-flex; align-items: center; gap: 8px; }
+.portada-ayuda a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.portada-explorar { position: absolute; bottom: 28px; right: 36px; display: flex; gap: 12px; align-items: center; font-size: 11px; }
+.inicio-explorar { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 24px; padding-block: 28px; scroll-margin-top: 20px; }
+.inicio-categorias { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.inicio-categorias a { display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: 1px solid #e3e7e6; padding: 11px 18px; border-radius: 999px; color: var(--color-palma-800); font-size: 13px; transition: background .2s; }
+.inicio-categorias a:hover { background: var(--color-palma-50); border-color: var(--color-palma-300); }
+.inicio-seccion { padding-block: 44px; }
+.inicio-antetitulo { font-size: 10px; font-weight: 700; letter-spacing: .16em; color: var(--color-palma-600); margin-bottom: 12px; }
+.inicio-palma h2 { font-family: var(--font-sans); font-weight: 700; font-size: clamp(1.65rem, 2.7vw, 2.2rem); line-height: 1.25; letter-spacing: -.04em; }
+.inicio-encabezado { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; }
+.inicio-ver-todos { display: inline-flex; align-items: center; gap: 10px; flex-shrink: 0; border-bottom: 1px solid var(--color-palma-300); padding-block: 8px; font-size: 13px; font-weight: 600; color: var(--color-palma-800); }
+.inicio-medida { display: grid; grid-template-columns: 1.1fr 1fr; gap: 64px; align-items: center; background: var(--color-palma-800); padding: 56px; border-radius: 32px; }
+.medida-texto .inicio-antetitulo { color: #b2d4c7; }
+.medida-texto h2 { color: white; font-size: clamp(1.8rem, 3vw, 2.6rem); }
+.medida-texto > p:not(.inicio-antetitulo) { color: #dfede7; font-size: 14px; line-height: 1.85; margin: 22px 0 28px; }
+.medida-nota { display: flex; align-items: center; gap: 7px; color: #b2d4c7; font-size: 11px; margin-top: 18px; }
+.medida-itinerario { background: #f7faf8; border-radius: 22px; padding: 30px; transform: rotate(2deg); }
+.medida-itinerario ol { padding-block: 12px; }
+.medida-itinerario li { display: flex; align-items: flex-start; gap: 16px; padding-block: 18px; }
+.medida-itinerario li > span { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: #e4eee8; color: var(--color-palma-800); font-size: 11px; font-weight: 700; flex-shrink: 0; }
+.medida-itinerario h3 { font-family: var(--font-sans); font-size: 14px; font-weight: 700; }
+.medida-itinerario li p { font-size: 12px; line-height: 1.7; margin-top: 5px; color: var(--color-tinta-500); }
+.inicio-beneficios { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 32px; gap: 36px; }
+.inicio-beneficios li { padding: 24px 0; border-top: 1px solid #dce4df; }
+.inicio-beneficios h3 { font-family: var(--font-sans); font-size: 17px; font-weight: 700; line-height: 1.5; margin-top: 20px; }
+.inicio-beneficios p { color: var(--color-tinta-500); font-size: 14px; line-height: 1.8; margin-top: 10px; }
+.inicio-cierre { display: flex; justify-content: space-between; align-items: center; gap: 32px; border-top: 1px solid #e3e7e6; margin-top: 24px; padding-block: 48px; }
+@media (max-width: 1023px) {
+  .buscador-viajes { grid-template-columns: repeat(3, minmax(0, 1fr)); border-radius: 24px; gap: 8px; }
+  .buscador-boton { grid-column: 1 / -1; min-height: 48px; }
+  .buscador-campo { padding-inline: 10px; gap: 8px; }
+  .inicio-medida { padding: 36px; gap: 30px; }
+}
+@media (max-width: 767px) {
+  .cabecera-inicio { top: 18px; left: 12px; right: 12px; }
+  .inicio-palma { padding-top: 10px; }
+  .portada-palma { margin-inline: 10px; border-radius: 24px; min-height: 0; }
+  .portada-contenido { padding: 110px 22px 64px; }
+  .portada-contenido h1 { font-size: clamp(2.25rem, 8vw, 3.8rem); }
+  .portada-descripcion { font-size: 14px; line-height: 1.75; }
+  .buscador-viajes { grid-template-columns: 1fr; margin-top: 28px; gap: 0; border-radius: 20px; }
+  .buscador-campo { padding: 12px; }
+  .buscador-campo + .buscador-campo { border-left: 0; border-top: 1px solid #e3e7e6; }
+  .buscador-campo select { min-height: 32px; font-size: 16px; }
+  .buscador-boton { margin-top: 8px; font-size: 14px; }
+  .portada-ayuda { margin-inline: 0; font-size: 11px; gap: 12px; }
+  .portada-explorar { display: none; }
+  .inicio-explorar { gap: 16px; padding-block: 28px 12px; }
+  .inicio-categorias { gap: 8px; }
+  .inicio-categorias a { padding: 10px 14px; font-size: 12px; }
+  .inicio-seccion { padding-block: 32px; }
+  .inicio-encabezado { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .inicio-medida { grid-template-columns: 1fr; padding: 30px 24px; gap: 36px; border-radius: 24px; }
+  .medida-itinerario { padding: 24px; transform: none; }
+  .inicio-beneficios { grid-template-columns: 1fr; gap: 0; margin-top: 24px; }
+  .inicio-beneficios li { padding-block: 24px; }
+  .inicio-beneficios h3 { margin-top: 14px; }
+  .inicio-cierre { flex-direction: column; align-items: flex-start; gap: 24px; }
 }

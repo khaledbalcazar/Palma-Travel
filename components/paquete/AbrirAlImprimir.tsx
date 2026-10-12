@@ -12,19 +12,27 @@ export function AbrirAlImprimir() {
   useEffect(() => {
     const marcados = () =>
       Array.from(
-        document.querySelectorAll<HTMLDetailsElement>('details[data-print="abrir"]'),
+        document.querySelectorAll<HTMLDetailsElement>(
+          'details[data-print="abrir"]',
+        ),
       );
 
     let estabanCerrados: HTMLDetailsElement[] = [];
+    let imprimiendo = false;
 
     const abrir = () => {
+      // beforeprint y matchMedia pueden avisar sobre la misma impresión.
+      if (imprimiendo) return;
+      imprimiendo = true;
       estabanCerrados = marcados().filter((d) => !d.open);
       for (const d of estabanCerrados) d.open = true;
     };
 
     const restaurar = () => {
+      if (!imprimiendo) return;
       for (const d of estabanCerrados) d.open = false;
       estabanCerrados = [];
+      imprimiendo = false;
     };
 
     window.addEventListener("beforeprint", abrir);

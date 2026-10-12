@@ -7,7 +7,12 @@ import { mesDe } from "@/lib/format";
    búsqueda se puede compartir por WhatsApp y llega igual del otro lado.
    =================================================================== */
 
-export const ORDENES = ["destacados", "precio-asc", "precio-desc", "salida"] as const;
+export const ORDENES = [
+  "destacados",
+  "precio-asc",
+  "precio-desc",
+  "salida",
+] as const;
 export type Orden = (typeof ORDENES)[number];
 
 export const ETIQUETA_ORDEN: Record<Orden, string> = {
@@ -32,6 +37,7 @@ export const RANGOS_DURACION = [
 ] as const;
 
 export type Filtros = {
+  busqueda: string;
   region: Region[];
   tipo: TipoViaje[];
   precio: string[];
@@ -42,6 +48,7 @@ export type Filtros = {
 };
 
 export const FILTROS_VACIOS: Filtros = {
+  busqueda: "",
   region: [],
   tipo: [],
   precio: [],
@@ -55,17 +62,23 @@ export const FILTROS_VACIOS: Filtros = {
 
 export function filtrosDesdeParams(params: URLSearchParams): Filtros {
   const lista = (clave: string) =>
-    (params.get(clave) ?? "").split(",").map((v) => v.trim()).filter(Boolean);
+    (params.get(clave) ?? "")
+      .split(",")
+      .map((v) => v.trim())
+      .filter(Boolean);
 
   const vuelo = params.get("vuelo");
   const orden = params.get("orden") as Orden | null;
 
   return {
+    busqueda: (params.get("q") ?? "").trim(),
     region: lista("region") as Region[],
     tipo: lista("tipo") as TipoViaje[],
     precio: lista("precio"),
     duracion: lista("duracion"),
-    mes: lista("mes").map(Number).filter((n) => n >= 1 && n <= 12),
+    mes: lista("mes")
+      .map(Number)
+      .filter((n) => n >= 1 && n <= 12),
     vuelo: vuelo === "si" || vuelo === "no" ? vuelo : null,
     orden: orden && ORDENES.includes(orden) ? orden : "destacados",
   };
@@ -73,6 +86,7 @@ export function filtrosDesdeParams(params: URLSearchParams): Filtros {
 
 export function paramsDesdeFiltros(filtros: Filtros): URLSearchParams {
   const params = new URLSearchParams();
+  if (filtros.busqueda.trim()) params.set("q", filtros.busqueda.trim());
   const poner = (clave: string, valores: (string | number)[]) => {
     if (valores.length) params.set(clave, valores.join(","));
   };
@@ -90,6 +104,7 @@ export function paramsDesdeFiltros(filtros: Filtros): URLSearchParams {
 
 export function cantidadDeFiltros(filtros: Filtros): number {
   return (
+    (filtros.busqueda.trim() ? 1 : 0) +
     filtros.region.length +
     filtros.tipo.length +
     filtros.precio.length +
@@ -114,14 +129,31 @@ const entraEnRango = (
 };
 
 /** Los meses en los que sale un paquete. Si es flexible, sale cualquier mes. */
-export function mesesDe(paquete: Pick<Paquete, "fechasSalida">): number[] | "todos" {
+export function mesesDe(
+  paquete: Pick<Paquete, "fechasSalida">,
+): number[] | "todos" {
   if (paquete.fechasSalida === "flexible") return "todos";
   return [...new Set(paquete.fechasSalida.map(mesDe))];
 }
 
-export function aplicarFiltros(paquetes: Paquete[], filtros: Filtros): Paquete[] {
+export function aplicarFiltros(
+  paquetes: Paquete[],
+  filtros: Filtros,
+): Paquete[] {
+  const normalizar = (texto: string) =>
+    texto
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLocaleLowerCase("es");
+  const palabras = normalizar(filtros.busqueda)
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean);
   return paquetes.filter((p) => {
-    if (filtros.region.length && !filtros.region.includes(p.region)) return false;
+    const texto = normalizar(`${p.titulo} ${p.destino} ${p.pais}`);
+    if (!palabras.every((palabra) => texto.includes(palabra))) return false;
+    if (filtros.region.length && !filtros.region.includes(p.region))
+      return false;
 
     if (
       filtros.tipo.length &&
@@ -129,7 +161,8 @@ export function aplicarFiltros(paquetes: Paquete[], filtros: Filtros): Paquete[]
     )
       return false;
 
-    if (!entraEnRango(p.precioDesde, filtros.precio, RANGOS_PRECIO)) return false;
+    if (!entraEnRango(p.precioDesde, filtros.precio, RANGOS_PRECIO))
+      return false;
     if (!entraEnRango(p.duracionDias, filtros.duracion, RANGOS_DURACION))
       return false;
 
@@ -160,7 +193,11 @@ function proximaSalidaOrden(paquete: Paquete, hoy: string): string {
   return futura ?? "9999-99-99";
 }
 
-export function ordenar(paquetes: Paquete[], orden: Orden, hoy: string): Paquete[] {
+export function ordenar(
+  paquetes: Paquete[],
+  orden: Orden,
+  hoy: string,
+): Paquete[] {
   const copia = [...paquetes];
 
   switch (orden) {

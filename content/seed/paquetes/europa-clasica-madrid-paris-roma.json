@@ -150,10 +150,7 @@
     "Hoteles 4 estrellas en zonas céntricas, para salir caminando",
     "Tren de alta velocidad Madrid – París incluido"
   ],
-  "imagenPortada": {
-    "src": "/muestra/europa-portada.svg",
-    "alt": "Ilustración del perfil de una ciudad europea con edificios de distintas alturas al atardecer"
-  },
+  "imagenPortada": {"src": "/images/europa.webp", "alt": "Puente Alejandro III de París iluminado al atardecer"},
   "galeria": [
     {
       "src": "/muestra/europa-1.svg",

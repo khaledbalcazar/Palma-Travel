@@ -1,299 +1,98 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import {
-  ArrowRight,
-  BadgeCheck,
-  HeartHandshake,
-  MessageCircleMore,
-  Quote,
-  Sparkles,
-} from "lucide-react";
-import { SITIO } from "@/config/site";
+import { ArrowDown, ArrowRight, Compass, HeartHandshake, MapPin, MessageCircleMore, Palmtree, Plane, Sparkles, Mountain, Landmark } from "lucide-react";
 import { getConfig, getPaquetesDestacados } from "@/lib/data";
 import { linkWhatsApp, mensajeAMedida } from "@/lib/whatsapp";
 import { agenciaDeViajes } from "@/lib/seo";
 import { Foto } from "@/components/ui/Foto";
 import { estiloBoton } from "@/components/ui/Boton";
 import { BotonWhatsApp } from "@/components/site/BotonWhatsApp";
+import { BuscadorViajes } from "@/components/site/BuscadorViajes";
 import { PaqueteCard } from "@/components/paquete/PaqueteCard";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/" },
-};
-
+export const metadata: Metadata = { alternates: { canonical: "/" } };
 export const revalidate = 3600;
 
 export default async function Home() {
-  const [destacados, config] = await Promise.all([
-    getPaquetesDestacados(3),
-    getConfig(),
-  ]);
-
+  const [destacados, config] = await Promise.all([getPaquetesDestacados(3), getConfig()]);
   const waAMedida = linkWhatsApp(config, mensajeAMedida());
 
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(agenciaDeViajes(config)),
-        }}
-      />
+    <div className="inicio-palma">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(agenciaDeViajes(config)) }} />
 
-      {/* ---------- Portada ---------- */}
-      <section className="relative">
-        <div className="relative h-[78vh] min-h-[32rem] w-full">
-          <Foto
-            src={config.heroImagen || "/muestra/hero-home.svg"}
-            alt="Una costa tropical al atardecer, con el sol bajo sobre el mar"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover"
-          />
-          <div className="absolute inset-0 velo-foto" />
-        </div>
-
-        <div className="contenedor absolute inset-x-0 bottom-0 pb-14 md:pb-20">
-          <div className="max-w-2xl">
-            <p className="text-sm font-semibold tracking-wide text-arena-300 uppercase">
-              Agencia de viajes paraguaya
-            </p>
-            <h1 className="mt-3 font-display text-5xl text-arena-50 md:text-7xl">
-              {config.heroTitulo}
-            </h1>
-            {config.heroSubtitulo && (
-              <p className="mt-5 max-w-xl text-lg text-arena-200">
-                {config.heroSubtitulo}
-              </p>
-            )}
-
-            <div className="mt-9 flex flex-wrap gap-3">
-              <Link
-                href="/paquetes"
-                className={estiloBoton({
-                  tamano: "lg",
-                  className: "bg-arena-50 text-palma-900 hover:bg-arena-200",
-                })}
-              >
-                Ver paquetes
-                <ArrowRight className="size-4" aria-hidden="true" />
-              </Link>
-              <Link
-                href="/encontra-tu-viaje"
-                className={estiloBoton({
-                  tamano: "lg",
-                  className:
-                    "bg-coral-600 text-white hover:bg-coral-700 shadow-suave",
-                })}
-              >
-                <Sparkles className="size-4" aria-hidden="true" />
-                Encontrá tu viaje ideal
-              </Link>
-            </div>
+      <section className="portada-palma" aria-labelledby="titulo-inicio">
+        <Foto src={config.heroImagen || "/images/costa-portada.webp"} alt="Un paisaje de costa para inspirar tu próximo viaje" fill priority sizes="100vw" className="object-cover" />
+        <div className="portada-velo" />
+        <div className="portada-contenido">
+          <p className="portada-antetitulo"><span />DESDE PARAGUAY, AL MUNDO</p>
+          <h1 id="titulo-inicio">{config.heroTitulo}</h1>
+          {config.heroSubtitulo && <p className="portada-descripcion">{config.heroSubtitulo}</p>}
+          <BuscadorViajes />
+          <div className="portada-ayuda">
+            <span><Plane className="size-4" aria-hidden="true" /> Salidas desde Asunción</span>
+            <Link href="/encontra-tu-viaje">¿Todavía no sabés a dónde? Te ayudamos <ArrowRight className="size-4" aria-hidden="true" /></Link>
           </div>
         </div>
+        <a href="#explorar" className="portada-explorar">Un viaje empieza con una idea <ArrowDown className="size-4" aria-hidden="true" /></a>
       </section>
 
-      {/* ---------- Paquetes destacados ---------- */}
-      <section className="contenedor py-20 md:py-24">
-        <div className="flex flex-wrap items-end justify-between gap-4">
-          <div className="max-w-xl">
-            <h2 className="font-display text-3xl md:text-4xl">
-              Los viajes del momento
-            </h2>
-            <p className="mt-3 text-tinta-600">
-              Una selección de lo que tenemos armado ahora, con salida desde
-              Asunción.
-            </p>
-          </div>
-          <Link
-            href="/paquetes"
-            className="inline-flex items-center gap-1.5 font-medium text-palma-800 underline-offset-4 hover:underline"
-          >
-            Ver todos
-            <ArrowRight className="size-4" aria-hidden="true" />
-          </Link>
-        </div>
-
-        {destacados.length > 0 ? (
-          <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {destacados.map((p, i) => (
-              <li key={p.slug}>
-                <PaqueteCard paquete={p} config={config} prioridad={i === 0} />
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <p className="mt-10 rounded-2xl border border-dashed border-palma-900/15 px-6 py-14 text-center text-tinta-500">
-            Todavía no hay paquetes publicados.
-          </p>
-        )}
-      </section>
-
-      {/* ---------- Viajes a medida ---------- */}
-      <section className="bg-palma-800 py-20 text-arena-50 md:py-24">
-        <div className="contenedor grid items-center gap-12 md:grid-cols-2">
-          <div>
-            <p className="text-sm font-semibold tracking-wide text-arena-300 uppercase">
-              Viajes a medida
-            </p>
-            <h2 className="mt-3 font-display text-3xl text-arena-50 md:text-4xl">
-              Si no está en la lista, igual lo armamos
-            </h2>
-            <p className="mt-5 text-arena-200/90">
-              La mitad de los viajes que vendemos no son un paquete de catálogo:
-              son viajes que alguien nos pidió y armamos desde cero. Vos nos
-              contás a dónde querés ir, con quién, cuántos días y cuánto pensás
-              gastar, y nosotros nos ocupamos de los vuelos, los hoteles, los
-              traslados y las excursiones.
-            </p>
-            <p className="mt-4 text-arena-200/90">
-              No cobramos nada por cotizarte. Si después no viajás con nosotros,
-              no pasa nada.
-            </p>
-
-            <div className="mt-8 flex flex-wrap gap-3">
-              <BotonWhatsApp href={waAMedida} origen="home_a_medida" tamano="lg">
-                Contanos qué viaje querés
-              </BotonWhatsApp>
-              <Link
-                href="/encontra-tu-viaje"
-                className={estiloBoton({
-                  tamano: "lg",
-                  className:
-                    "bg-arena-50/12 text-arena-50 hover:bg-arena-50/22",
-                })}
-              >
-                Responder el cuestionario
-              </Link>
-            </div>
-          </div>
-
-          <ul className="grid gap-4 sm:grid-cols-2">
-            {[
-              {
-                titulo: "Luna de miel",
-                texto: "Dos semanas entre playa y ciudad, sin apuro.",
-              },
-              {
-                titulo: "Viaje en familia",
-                texto: "Con los chicos, con hoteles que tengan pileta y buen desayuno.",
-              },
-              {
-                titulo: "Aniversario",
-                texto: "Un fin de semana largo cerca, sin gastar de más.",
-              },
-              {
-                titulo: "Viaje de egresados",
-                texto: "Grupo grande, presupuesto ajustado y todo organizado.",
-              },
-            ].map((item) => (
-              <li key={item.titulo} className="rounded-2xl bg-palma-900/40 p-5">
-                <p className="font-display text-lg text-arena-50">{item.titulo}</p>
-                <p className="mt-1.5 text-sm text-arena-200/80">{item.texto}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      {/* ---------- Por qué Palma Travel ---------- */}
-      <section className="contenedor py-20 md:py-24">
-        <h2 className="max-w-2xl font-display text-3xl md:text-4xl">
-          Por qué viajar con nosotros
-        </h2>
-
-        <ul className="mt-10 grid gap-6 md:grid-cols-3">
+      <section id="explorar" className="contenedor inicio-explorar" aria-label="Explorá por tipo de viaje">
+        <span className="text-sm font-semibold text-tinta-500">¿Qué te dan ganas de hacer?</span>
+        <div className="inicio-categorias">
           {[
-            {
-              icono: BadgeCheck,
-              titulo: "Agencia registrada en SENATUR",
-              texto: config.registroSenatur
-                ? `Estamos habilitados por la Secretaría Nacional de Turismo con el registro n.º ${config.registroSenatur}. No somos una cuenta de Instagram que vende paquetes.`
-                : "Estamos habilitados por la Secretaría Nacional de Turismo. No somos una cuenta de Instagram que vende paquetes.",
-            },
-            {
-              icono: MessageCircleMore,
-              titulo: "Te atiende una persona",
-              texto:
-                "Nada de formularios que nadie contesta. Escribís por WhatsApp y te responde alguien del equipo, con nombre y apellido.",
-            },
-            {
-              icono: HeartHandshake,
-              titulo: "Te acompañamos todo el viaje",
-              texto:
-                "Desde que cotizamos hasta que volvés. Si algo se complica allá, tenés a quién escribirle a cualquier hora.",
-            },
-          ].map(({ icono: Icono, titulo, texto }) => (
-            <li key={titulo} className="rounded-2xl bg-arena-100 p-7">
-              <Icono className="size-7 text-palma-600" aria-hidden="true" />
-              <h3 className="mt-4 font-display text-xl">{titulo}</h3>
-              <p className="mt-2 text-[0.95rem] text-tinta-600">{texto}</p>
-            </li>
-          ))}
+            { tipo: "playa", texto: "Sol y playa", icono: Palmtree },
+            { tipo: "aventura", texto: "Aventura", icono: Mountain },
+            { tipo: "cultura", texto: "Cultura", icono: Landmark },
+            { tipo: "naturaleza", texto: "Naturaleza", icono: Compass },
+          ].map(({ tipo, texto, icono: Icono }) => <Link key={tipo} href={`/paquetes?tipo=${tipo}`}><Icono className="size-4" aria-hidden="true" />{texto}</Link>)}
+        </div>
+      </section>
+
+      <section className="contenedor inicio-seccion" aria-labelledby="destacados-titulo">
+        <div className="inicio-encabezado">
+          <div><p className="inicio-antetitulo">TU PRÓXIMA ESCAPADA</p><h2 id="destacados-titulo">Un destino. Mil ganas de ir.</h2><p className="mt-3 text-tinta-500">Descubrí nuestros viajes destacados, con salida desde Asunción.</p></div>
+          <Link href="/paquetes" className="inicio-ver-todos">Ver todos los viajes <ArrowRight className="size-4" aria-hidden="true" /></Link>
+        </div>
+        {destacados.length ? <ul className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">{destacados.map((p) => <li key={p.slug}><PaqueteCard paquete={p} config={config} /></li>)}</ul> : <div className="mt-8 rounded-2xl border border-palma-900/15 bg-tinta-50 p-10 text-center"><p>Estamos preparando los próximos viajes.</p><Link href="/contacto" className="mt-4 inline-flex font-semibold text-palma-800 underline">Contanos a dónde querés ir</Link></div>}
+      </section>
+
+      <section className="contenedor inicio-seccion" aria-labelledby="a-medida-titulo">
+        <div className="inicio-medida">
+          <div className="medida-texto">
+            <p className="inicio-antetitulo">VIAJES TAN ÚNICOS COMO VOS</p>
+            <h2 id="a-medida-titulo">Vos ponés el sueño.<br />Nosotros, el plan.</h2>
+            <p>Una luna de miel, una aventura con amigos o ese viaje en familia que venís imaginando. Contanos qué tenés en mente y lo armamos a tu medida.</p>
+            <Link href="/encontra-tu-viaje" className={estiloBoton({ tamano: "lg", className: "bg-white text-palma-900 hover:bg-arena-100 shadow-none" })}>Encontrá tu viaje ideal <ArrowRight className="size-4" aria-hidden="true" /></Link>
+            <span className="medida-nota"><Sparkles className="size-4" aria-hidden="true" /> Unas preguntas para empezar a conocerte</span>
+          </div>
+          <div className="medida-itinerario">
+            <div className="flex items-center justify-between border-b border-palma-900/10 pb-5"><span className="text-xs font-bold tracking-widest text-palma-700">TU VIAJE, A TU MANERA</span><Plane className="size-5 text-palma-700" aria-hidden="true" /></div>
+            <ol>
+              <li><span>01</span><div><h3>Contanos tu idea</h3><p>Destino, compañía y ganas de explorar.</p></div></li>
+              <li><span>02</span><div><h3>Le damos forma juntos</h3><p>Vuelos, hoteles y experiencias a tu medida.</p></div></li>
+              <li><span>03</span><div><h3>Disfrutá el camino</h3><p>Con nuestro equipo acompañándote.</p></div></li>
+            </ol>
+            <div className="flex items-center gap-2 border-t border-palma-900/10 pt-5 text-xs font-medium text-tinta-500"><MapPin className="size-4" aria-hidden="true" /> Desde Asunción hasta donde quieras llegar</div>
+          </div>
+        </div>
+      </section>
+
+      <section className="contenedor inicio-seccion" aria-labelledby="equipo-titulo">
+        <div className="inicio-encabezado"><div><p className="inicio-antetitulo">CERCA TUYO, VAYAS DONDE VAYAS</p><h2 id="equipo-titulo">Viajá con un equipo de tu lado.</h2></div></div>
+        <ul className="inicio-beneficios">
+          {[
+            { icono: MessageCircleMore, titulo: "Personas, no respuestas automáticas", texto: "Conversá con el equipo y resolvé tus dudas antes de elegir tu próximo destino." },
+            { icono: Compass, titulo: "Un viaje que va con vos", texto: "Elegí un paquete o armemos una propuesta según tus tiempos, tus gustos y tu presupuesto." },
+            { icono: HeartHandshake, titulo: "Del primer mensaje al regreso", texto: "Te acompañamos en la planificación y durante el viaje para que disfrutes cada etapa." },
+          ].map(({ icono: Icono, titulo, texto }) => <li key={titulo}><Icono className="size-6 text-palma-600" aria-hidden="true" /><h3>{titulo}</h3><p>{texto}</p></li>)}
         </ul>
       </section>
 
-      {/* ---------- Testimonios ---------- */}
-      <section className="contenedor pb-20 md:pb-24">
-        <h2 className="font-display text-3xl md:text-4xl">Lo que dicen</h2>
-        <p className="mt-2 text-sm text-tinta-500">
-          Testimonios de ejemplo. Reemplazalos por comentarios reales de
-          clientes antes de publicar el sitio.
-        </p>
-
-        <ul className="mt-8 grid gap-6 md:grid-cols-3">
-          {[
-            {
-              texto:
-                "Nos armaron la luna de miel en dos días y nos resolvieron un cambio de vuelo a último momento. Volveríamos a viajar con ellos sin dudarlo.",
-              quien: "Nombre del cliente",
-              viaje: "Viaje realizado",
-            },
-            {
-              texto:
-                "Fuimos con los chicos y estaba todo pensado: los traslados, el hotel, hasta dónde comer. No tuvimos que preocuparnos por nada.",
-              quien: "Nombre del cliente",
-              viaje: "Viaje realizado",
-            },
-            {
-              texto:
-                "Es la tercera vez que viajo con Palma. Lo que más valoro es que te dicen la verdad, aunque signifique venderte algo más barato.",
-              quien: "Nombre del cliente",
-              viaje: "Viaje realizado",
-            },
-          ].map((t, i) => (
-            <li key={i} className="rounded-2xl bg-arena-50 p-7 shadow-suave">
-              <Quote className="size-6 text-arena-400" aria-hidden="true" />
-              <blockquote className="mt-4 text-[0.95rem] leading-relaxed text-tinta-700">
-                {t.texto}
-              </blockquote>
-              <p className="mt-5 text-sm font-medium text-palma-900">{t.quien}</p>
-              <p className="text-xs text-tinta-500">{t.viaje}</p>
-            </li>
-          ))}
-        </ul>
+      <section className="contenedor inicio-seccion inicio-cierre">
+        <div><p className="inicio-antetitulo">EMPECEMOS POR UNA CHARLA</p><h2>¿A dónde te gustaría ir?</h2><p className="mt-3 text-tinta-500">Contanos tu idea. El próximo viaje empieza acá.</p></div>
+        {waAMedida ? <BotonWhatsApp href={waAMedida} origen="home_cierre" tamano="lg">Hablemos de tu viaje</BotonWhatsApp> : <Link href="/contacto" className={estiloBoton({ tamano: "lg", className: "shadow-none" })}>Hablemos de tu viaje <ArrowRight className="size-4" aria-hidden="true" /></Link>}
       </section>
-
-      {/* ---------- Cierre ---------- */}
-      <section className="contenedor pb-24">
-        <div className="rounded-3xl bg-arena-200 px-6 py-14 text-center md:px-12">
-          <h2 className="font-display text-3xl md:text-4xl">{SITIO.eslogan}</h2>
-          <p className="mx-auto mt-3 max-w-xl text-tinta-600">
-            Escribinos y empezamos a armarlo hoy. Sin compromiso y sin costo.
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <BotonWhatsApp href={waAMedida} origen="home_cierre" tamano="lg" />
-            <Link
-              href="/contacto"
-              className={estiloBoton({ variante: "fantasma", tamano: "lg" })}
-            >
-              Ver todos los datos de contacto
-            </Link>
-          </div>
-        </div>
-      </section>
-    </>
+    </div>
   );
 }

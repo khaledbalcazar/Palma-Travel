@@ -53,7 +53,7 @@
     "Cuatro fechas de salida entre noviembre y febrero",
     "Cobertura de asistencia al viajero ampliada incluida"
   ],
-  "imagenPortada": { "src": "/muestra/puntacana-portada.svg", "alt": "Ilustración de una playa caribeña con agua turquesa y cielo despejado" },
+  "imagenPortada": {"src": "/images/puntacana.webp", "alt": "Vista aérea de una playa de Punta Cana con palmeras y mar turquesa"},
   "galeria": [
     { "src": "/muestra/puntacana-1.svg", "alt": "Ilustración de una costa tropical de arena blanca" },
     { "src": "/muestra/puntacana-2.svg", "alt": "Ilustración del mar en calma bajo un sol alto" },

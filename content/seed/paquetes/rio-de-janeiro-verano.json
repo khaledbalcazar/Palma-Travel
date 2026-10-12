@@ -49,12 +49,17 @@
     "Dos días enteros libres para hacer tu propio plan",
     "Vuelo directo desde Asunción incluido"
   ],
-  "imagenPortada": { "src": "/muestra/rio-portada.svg", "alt": "Ilustración de una costa tropical al atardecer, con el sol bajo sobre el mar" },
+  "imagenPortada": {"src": "/images/rio.webp", "alt": "Vista del Pan de Azúcar y la bahía de Río de Janeiro"},
   "galeria": [
-    { "src": "/muestra/rio-1.svg", "alt": "Ilustración del perfil de una ciudad con edificios altos contra el cielo" },
-    { "src": "/muestra/rio-2.svg", "alt": "Ilustración de una playa de arena clara con el mar en calma" },
-    { "src": "/muestra/rio-3.svg", "alt": "Ilustración de cerros verdes recortados sobre un cielo cálido" }
-  ],
+  {
+    "src": "/images/rio-corcovado.webp",
+    "alt": "Vista del Cristo Redentor, la laguna y la costa de Río de Janeiro"
+  },
+  {
+    "src": "/images/rio-teleferico.webp",
+    "alt": "Teleférico del Pan de Azúcar con la ciudad de Río de Janeiro al atardecer"
+  }
+],
   "documentacion": [
     { "titulo": "Documento de identidad", "detalle": "Los paraguayos pueden entrar a Brasil con la cédula de identidad vigente y en buen estado, o con el pasaporte. Para menores de edad que viajan sin uno de los padres se necesita autorización." },
     { "titulo": "Visa", "detalle": "No se necesita visa para ciudadanos paraguayos." },

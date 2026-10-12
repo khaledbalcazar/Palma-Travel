@@ -46,7 +46,7 @@
     "Sin trámites ni pasaporte: todo dentro de Paraguay",
     "Ideal para escaparse tres días sin pedir muchos días de vacaciones"
   ],
-  "imagenPortada": { "src": "/muestra/misiones-portada.svg", "alt": "Ilustración de una construcción antigua de piedra con frontón, recortada contra un cielo cálido" },
+  "imagenPortada": {"src": "/images/misiones.webp", "alt": "Ruinas de la iglesia de La Santísima Trinidad de Paraná, Paraguay"},
   "galeria": [
     { "src": "/muestra/misiones-1.svg", "alt": "Ilustración de vegetación densa y copas de árboles al atardecer" },
     { "src": "/muestra/misiones-2.svg", "alt": "Ilustración de ruinas de piedra bajo el sol" },

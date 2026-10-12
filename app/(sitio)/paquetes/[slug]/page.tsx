@@ -7,9 +7,8 @@ import {
   getPaquetes,
   getPaquetesSimilares,
 } from "@/lib/data";
-import { linkWhatsApp, mensajePaquete } from "@/lib/whatsapp";
 import { duracion, precioUSD } from "@/lib/format";
-import { CuerpoViaje } from "@/components/paquete/CuerpoViaje";
+import { DetallePaquete } from "@/components/paquete/DetallePaquete";
 import { Similares } from "@/components/paquete/Similares";
 import { RegistrarVista } from "@/components/paquete/RegistrarVista";
 import { datosEstructuradosViaje } from "@/lib/seo";
@@ -67,7 +66,6 @@ export default async function PaginaPaquete({
   if (!paquete) notFound();
 
   const similares = await getPaquetesSimilares(slug);
-  const whatsapp = linkWhatsApp(config, mensajePaquete(paquete));
 
   return (
     <>
@@ -82,10 +80,9 @@ export default async function PaginaPaquete({
         destino={paquete.destino}
         precio={paquete.precioDesde}
       />
-      <CuerpoViaje
-        viaje={paquete}
+      <DetallePaquete
+        paquete={paquete}
         config={config}
-        whatsapp={whatsapp}
         similares={<Similares paquetes={similares} config={config} />}
       />
     </>

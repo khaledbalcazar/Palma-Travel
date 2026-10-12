@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
+import Link from "next/link";
+import { ArrowRight, Plane, Sparkles } from "lucide-react";
+import { Foto } from "@/components/ui/Foto";
 import { getConfig, getPaquetes } from "@/lib/data";
 import { hoyISO } from "@/lib/format";
 import { Catalogo } from "@/components/paquete/Catalogo";
@@ -21,23 +24,58 @@ export default async function PaginaPaquetes() {
   const [paquetes, config] = await Promise.all([getPaquetes(), getConfig()]);
 
   return (
-    <div className="contenedor py-12 md:py-16">
-      <header className="max-w-2xl">
-        <h1 className="font-display text-4xl md:text-5xl">Nuestros viajes</h1>
-        <p className="mt-4 text-lg text-tinta-600">
-          Todo lo que tenemos armado hoy, con salida desde Asunción. Si ninguno
-          te cierra del todo, te lo armamos a tu medida.
-        </p>
-      </header>
-
-      <div className="mt-10">
-        <Suspense
-          fallback={
-            <p className="text-tinta-500">Cargando los viajes…</p>
-          }
-        >
-          <Catalogo paquetes={paquetes} config={config} hoy={hoyISO()} />
-        </Suspense>
+    <div className="pagina-paquetes">
+      <div className="contenedor">
+        <nav className="paquetes-migas" aria-label="Ubicación">
+          <Link href="/">Inicio</Link>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Paquetes</span>
+        </nav>
+        <header className="paquetes-portada">
+          <div className="paquetes-portada-texto">
+            <p className="inicio-antetitulo">EL MUNDO TE ESTÁ ESPERANDO</p>
+            <h1>
+              Un viaje para cada
+              <br />
+              <span>forma de soñar.</span>
+            </h1>
+            <p>
+              De una escapada cerca a ese destino que siempre imaginaste. Elegí
+              tu próximo viaje; nosotros te acompañamos.
+            </p>
+            <div className="paquetes-portada-datos">
+              <span>
+                <Plane size={15} aria-hidden="true" />
+                Salidas desde Asunción
+              </span>
+              <span>
+                <Sparkles size={15} aria-hidden="true" />
+                Asesoramiento personal
+              </span>
+            </div>
+          </div>
+          <div className="paquetes-portada-foto">
+            <Foto
+              src={config.heroImagen || "/images/costa-portada.webp"}
+              alt="Costa y mar turquesa para inspirar tu próximo viaje"
+              fill
+              priority
+              sizes="(max-width: 767px) 100vw, 450px"
+            />
+            <div />
+            <Link href="/encontra-tu-viaje">
+              Tu próxima historia empieza acá{" "}
+              <ArrowRight size={18} aria-hidden="true" />
+            </Link>
+          </div>
+        </header>
+        <div className="paquetes-catalogo">
+          <Suspense
+            fallback={<p className="text-tinta-500">Cargando los viajes…</p>}
+          >
+            <Catalogo paquetes={paquetes} config={config} hoy={hoyISO()} />
+          </Suspense>
+        </div>
       </div>
     </div>
   );

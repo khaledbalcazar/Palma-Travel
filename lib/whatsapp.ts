@@ -1,5 +1,6 @@
 import { SITIO } from "@/config/site";
 import type { SiteConfig } from "@/lib/schema";
+import { fechaLarga } from "@/lib/format";
 
 /* ===================================================================
    WHATSAPP — el canal principal de venta
@@ -19,8 +20,7 @@ export function linkWhatsApp(
   return `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
 }
 
-const urlAbsoluta = (ruta: string) =>
-  `${SITIO.url.replace(/\/$/, "")}${ruta}`;
+const urlAbsoluta = (ruta: string) => `${SITIO.url.replace(/\/$/, "")}${ruta}`;
 
 /** Consulta general, desde la home o el menú. */
 export function mensajeGeneral(): string {
@@ -38,6 +38,21 @@ export function mensajePaquete(paquete: {
     `¡Hola Palma Travel! Me interesa el paquete "${paquete.titulo}" (${paquete.destino}).`,
     `¿Me pasás más información?`,
     ``,
+    urlAbsoluta(`/paquetes/${paquete.slug}`),
+  ].join("\n");
+}
+
+/** Preferencias de consulta; no representan una reserva ni un precio final. */
+export function mensajeConsultaPaquete(
+  paquete: { titulo: string; slug: string; destino: string; estado: string },
+  preferencias: { fecha: string; viajeros: string },
+): string {
+  return [
+    `¡Hola Palma Travel! Me interesa ${paquete.estado === "agotado" ? "la lista de espera del paquete" : "el paquete"} "${paquete.titulo}" (${paquete.destino}).`,
+    `Fecha preferida: ${preferencias.fecha ? fechaLarga(preferencias.fecha) : "a coordinar"}.`,
+    `Cantidad de viajeros: ${preferencias.viajeros}.`,
+    "¿Me ayudan a confirmar las opciones y el precio final?",
+    "",
     urlAbsoluta(`/paquetes/${paquete.slug}`),
   ].join("\n");
 }
@@ -60,7 +75,10 @@ export function mensajePropuesta(propuesta: {
 export function mensajeAMedida(resumen?: string[]): string {
   const base = `¡Hola Palma Travel! Quiero armar un viaje a medida.`;
   if (!resumen || resumen.length === 0) return base;
-  return [base, ``, `Esto es lo que busco:`, ...resumen.map((r) => `· ${r}`)].join(
-    "\n",
-  );
+  return [
+    base,
+    ``,
+    `Esto es lo que busco:`,
+    ...resumen.map((r) => `· ${r}`),
+  ].join("\n");
 }
